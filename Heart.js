@@ -33,30 +33,30 @@ let hit = JSON.parse(fs.readFileSync('./Gallery/database/total-hit-user.json'))
 
 //time
 const replay = (teks) => {
-            Maria.sendMessage(m.chat, { text: teks}, { quoted: m})
+            Kish.sendMessage(m.chat, { text: teks}, { quoted: m})
         }
 const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
         const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
         const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')  
          if(time2 < "23:59:00"){
-var Ayushytimewisher = `Good Night 🌌`
+var Kishytimewisher = `Good Night 🌌`
  }
  if(time2 < "19:00:00"){
-var Ayushytimewisher = `Good Evening 🌃`
+var Kishytimewisher = `Good Evening 🌃`
  }
  if(time2 < "18:00:00"){
-var Ayushytimewisher = `Good Evening 🌃`
+var Kishytimewisher = `Good Evening 🌃`
  }
  if(time2 < "15:00:00"){
-var Ayushytimewisher = `Good Afternoon 🌅`
+var Kishytimewisher = `Good Afternoon 🌅`
  }
  if(time2 < "11:00:00"){
-var Ayushytimewisher = `Good Morning 🌄`
+var Kishytimewisher = `Good Morning 🌄`
  }
  if(time2 < "05:00:00"){
-var Ayushytimewisher = `Good Morning 🌄`
+var Kishytimewisher = `Good Morning 🌄`
  } 
-module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
+module.exports = Kish = async (Kish, m, msg, chatUpdate, store) => {
     try {
         const {
             type,
@@ -74,7 +74,7 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const full_args = body.replace(command, '').slice(1).trim()
         const pushname = m.pushName || "No Name"
-        const botNumber = await Maria.decodeJid(Maria.user.id)
+        const botNumber = await Kish.decodeJid(Kish.user.id)
         const itsMe = m.sender == botNumber ? true : false
         
         const sender = m.sender
@@ -102,7 +102,7 @@ module.exports = Maria = async (Maria, m, msg, chatUpdate, store) => {
         const sticker = []
         const isAfkOn = afk.checkAfkUser(m.sender, _afk)
         const isGroup = m.key.remoteJid.endsWith('@g.us')
-        const groupMetadata = m.isGroup ? await Maria.groupMetadata(m.chat).catch(e => {}) : ''
+        const groupMetadata = m.isGroup ? await Kish.groupMetadata(m.chat).catch(e => {}) : ''
         const groupName = m.isGroup ? groupMetadata.subject : ''
         const participants = m.isGroup ? await groupMetadata.participants : ''
         const groupAdmins = m.isGroup ? await getGroupAdmins(participants) : ''
@@ -146,9 +146,9 @@ const getRandomImage = (directory) => {
 const imageDirectory = './Gallery/Theme-logo';
   const randomImage = getRandomImage(imageDirectory);
 
-//group chat msg by Ayush
+//group chat msg by Kish
 const reply = (teks) => {
-Maria.sendMessage(m.chat,
+Kish.sendMessage(m.chat,
 { text: teks,
 contextInfo:{
 mentionedJid:[sender],
@@ -167,7 +167,7 @@ isForwarded: true,
 }
 
 async function loading () {
-var Ayushlod = [
+var Kishlod = [
 "《 ▒▒▒▒▒▒▒▒▒▒▒》10%",
 "《 ████▒▒▒▒▒▒▒▒》30%",
 "《 ███████▒▒▒▒▒》50%",
@@ -175,10 +175,10 @@ var Ayushlod = [
 "《 ████████████》100%",
 "Done ✅️"
 ]
-let { key } = await Maria.sendMessage(from, {text: 'ʟᴏᴀᴅɪɴɢ...'})
+let { key } = await Kish.sendMessage(from, {text: 'ʟᴏᴀᴅɪɴɢ...'})
 
-for (let i = 0; i < Ayushlod.length; i++) {
-await Maria.sendMessage(from, {text: Ayushlod[i], edit: key });
+for (let i = 0; i < Kishlod.length; i++) {
+await Kish.sendMessage(from, {text: Kishlod[i], edit: key });
 }
 }
 
@@ -187,7 +187,7 @@ async function Telesticker(url) {
         if (!url.match(/(https:\/\/t.me\/addstickers\/)/gi)) return reply('Enter your url telegram sticker link')
         packName = url.replace("https://t.me/addstickers/", "")
         data = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getStickerSet?name=${encodeURIComponent(packName)}`, {method: "GET",headers: {"User-Agent": "GoogleBot"}})
-        const mariayresult = []
+        const Kishyresult = []
         for (let i = 0; i < data.data.result.stickers.length; i++) {
             fileId = data.data.result.stickers[i].thumb.file_id
             data2 = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
@@ -196,49 +196,49 @@ async function Telesticker(url) {
             author: '💙𓆩‎✘AʏᴜSʜ✘𓆪_✰',
             url: "https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + data2.data.result.file_path
             }
-            mariayresult.push(result)
+            Kishyresult.push(result)
         }
-    resolve(mariayresult)
+    resolve(Kishyresult)
     })
 }
 
-        if (!Maria.public) {
+        if (!Kish.public) {
             if (!isCreator && !m.key.fromMe) return
         }
         if (autoread) {
-            Maria.readMessages([m.key])
+            Kish.readMessages([m.key])
         }
         if (global.autoTyping) {
 
-        Maria.sendPresenceUpdate('composing', from)
+        Kish.sendPresenceUpdate('composing', from)
 
 
         }
 
         if (global.autoRecording) {
 
-        Maria.sendPresenceUpdate('recording', from)
+        Kish.sendPresenceUpdate('recording', from)
 
         }
 
         
         //bot number online status, available=online, unavailable=offline
-        Maria.sendPresenceUpdate('unavailable', from)
+        Kish.sendPresenceUpdate('unavailable', from)
         
         if (global.autorecordtype) {
-        let Ayushrecordin = ['recording','composing']
+        let Kishrecordin = ['recording','composing']
 
-        let Ayushrecordinfinal = Ayushrecordin[Math.floor(Math.random() * Ayushrecordin.length)]
+        let Kishrecordinfinal = Kishrecordin[Math.floor(Math.random() * Kishrecordin.length)]
 
-        Maria.sendPresenceUpdate(Ayushrecordinfinal, from)
+        Kish.sendPresenceUpdate(Kishrecordinfinal, from)
 
         }
         
         if (autobio) {
-            Maria.updateProfileStatus(`Hey, future leaders! 🌟 Maria-Md is here to inspire and lead, thanks to Ayush Botz, Inc. 🚀 ${runtime(process.uptime())} `).catch(_ => _)
+            Kish.updateProfileStatus(`Hey, future leaders! 🌟 Kish-Md is here to inspire and lead, thanks to Kish Botz, Inc. 🚀 ${runtime(process.uptime())} `).catch(_ => _)
         }
         if (m.sender.startsWith('212') && global.anti212 === true) {
-            return Maria.updateBlockStatus(m.sender, 'block')
+            return Kish.updateBlockStatus(m.sender, 'block')
         }
 
 
@@ -286,7 +286,7 @@ async function Telesticker(url) {
                 let heheh = ms(getTime)
                 _afk.splice(afk.getAfkPosition(m.sender, _afk), 1)
                 fs.writeFileSync('./Gallery/database/afk-user.json', JSON.stringify(_afk))
-                Maria.sendTextWithMentions(m.chat, `@${m.sender.split('@')[0]} have returned from afk`, m)
+                Kish.sendTextWithMentions(m.chat, `@${m.sender.split('@')[0]} have returned from afk`, m)
             }
         }
         
@@ -309,7 +309,7 @@ bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nyou are a group admin thats why i wo
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
-        await Maria.sendMessage(m.chat,
+        await Kish.sendMessage(m.chat,
 			    {
 			        delete: {
 			            remoteJid: m.chat,
@@ -318,12 +318,12 @@ if (isCreator) return reply(bvl)
 			            participant: m.key.participant
 			        }
 			    })
-			Maria.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-Maria.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+			Kish.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+Kish.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
 	    //total features by xeon sir
-const mariafeature = () =>{
+const Kishfeature = () =>{
             var mytext = fs.readFileSync("./Heart.js").toString()
             var numUpper = (mytext.match(/case '/g) || []).length
             return numUpper
@@ -339,13 +339,13 @@ if (AntiLinkAll) return reply('Already activated')
 ntilinkall.push(from)
 fs.writeFileSync('./Gallery/database/antilink.json', JSON.stringify(ntilinkall))
 reply('Success in turning on all antilink in this group')
-var groupe = await Maria.groupMetadata(from)
+var groupe = await Kish.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-Maria.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send any link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+Kish.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send any link in this group or u will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLinkAll) return reply('Already deactivated')
 let off = ntilinkall.indexOf(from)
@@ -363,10 +363,10 @@ if (!isCreator) return replay(mess.botowner)
 if (!quoted) return reply(`Send/Reply Image With Caption ${prefix + command}`)
 if (!/image/.test(mime)) return reply(`Send/Reply Image With Caption ${prefix + command}`)
 if (/webp/.test(mime)) return reply(`Send/Reply Image With Caption ${prefix + command}`)
-var medis = await Maria.downloadAndSaveMediaMessage(quoted, 'ppbot.jpeg')
+var medis = await Kish.downloadAndSaveMediaMessage(quoted, 'ppbot.jpeg')
 if (args[0] == `full`) {
 var { img } = await generateProfilePicture(medis)
-await Maria.query({
+await Kish.query({
 tag: 'iq',
 attrs: {
 to: botNumber,
@@ -384,7 +384,7 @@ content: img
 fs.unlinkSync(medis)
 reply(`Succes`)
 } else {
-var memeg = await Maria.updateProfilePicture(botNumber, { url: medis })
+var memeg = await Kish.updateProfilePicture(botNumber, { url: medis })
 fs.unlinkSync(medis)
 reply(`Success, Thank you for the new profile photo, my darling 😚`)
 }
@@ -427,7 +427,7 @@ break
                     if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return reply('Link Invalid!')
                     reply(mess.wait)
                     let result = args[0].split('https://chat.whatsapp.com/')[1]
-                    await Maria.groupAcceptInvite(result).then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                    await Kish.groupAcceptInvite(result).then((res) => reply(json(res))).catch((err) => reply(json(err)))
                 } catch {
                     reply('Failed to join the Group')
                 }
@@ -436,7 +436,7 @@ break
                 if (!isCreator) return reply(mess.owner)
                 reply('Wait a moment, currently retrieving your session file')
                 let sesi = await fs.readFileSync('./session/creds.json')
-                Maria.sendMessage(m.chat, {
+                Kish.sendMessage(m.chat, {
                     document: sesi,
                     mimetype: 'application/json',
                     fileName: 'creds.json'
@@ -525,10 +525,10 @@ break
                 if (!isCreator) return reply(mess.owner)
                 if (args.length < 1) return reply(`📑 Check out this example: ${prefix + command} in public/self`)
                 if (q == 'public') {
-                    Maria.public = true
+                    Kish.public = true
                     reply(mess.done)
                 } else if (q == 'self') {
-                    Maria.public = false
+                    Kish.public = false
                     reply(mess.done)
                 }
                 break
@@ -546,12 +546,12 @@ break
                 if (!quoted) return reply(`Send/Reply Image With Caption ${prefix + command}`)
                 if (!/image/.test(mime)) return reply(`Send/Reply Image With Caption ${prefix + command}`)
                 if (/webp/.test(mime)) return reply(`Send/Reply Image With Caption ${prefix + command}`)
-                var medis = await Maria.downloadAndSaveMediaMessage(quoted, 'ppbot.jpeg')
+                var medis = await Kish.downloadAndSaveMediaMessage(quoted, 'ppbot.jpeg')
                 if (args[0] == 'full') {
                     var {
                         img
                     } = await generateProfilePicture(medis)
-                    await Maria.query({
+                    await Kish.query({
                         tag: 'iq',
                         attrs: {
                             to: botNumber,
@@ -569,7 +569,7 @@ break
                     fs.unlinkSync(medis)
                     reply(mess.done)
                 } else {
-                    var memeg = await Maria.updateProfilePicture(botNumber, {
+                    var memeg = await Kish.updateProfilePicture(botNumber, {
                         url: medis
                     })
                     fs.unlinkSync(medis)
@@ -579,36 +579,36 @@ break
             case 'block':
                 if (!isCreator) return reply(mess.owner)
                 let blockw = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-                await Maria.updateBlockStatus(blockw, 'block').then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                await Kish.updateBlockStatus(blockw, 'block').then((res) => reply(json(res))).catch((err) => reply(json(err)))
                 break
             case 'unblock':
                 if (!isCreator) return reply(mess.owner)
                 let blockww = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-                await Maria.updateBlockStatus(blockww, 'unblock').then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                await Kish.updateBlockStatus(blockww, 'unblock').then((res) => reply(json(res))).catch((err) => reply(json(err)))
                 break
             case 'leave':
                 if (!isCreator) return reply(mess.owner)
                 if (!m.isGroup) return reply(mess.group)
                 reply('🟨Bye Everyone 🥺')
-                await Maria.groupLeave(m.chat)
+                await Kish.groupLeave(m.chat)
                 break
             case 'bcgc':
             case 'bcgroup': {
                 if (!isCreator) return reply(mess.owner)
                 if (!text) return reply(`Which text?\n\nExample : ${prefix + command} It's holiday tomorrow `)
-                let getGroups = await Maria.groupFetchAllParticipating()
+                let getGroups = await Kish.groupFetchAllParticipating()
                 let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
                 let anu = groups.map(v => v.id)
                 reply(`Send Broadcast To ${anu.length} Group Chat, End Time ${anu.length * 1.5} second`)
                 for (let i of anu) {
                     await sleep(2500)
                     let a = '```' + `\n📒${text}\n\n` + '```' + '\n\n*✍️Author:* ${pushname} '
-                    Maria.sendMessage(i, {
+                    Kish.sendMessage(i, {
                         text: a,
                         contextInfo: {
                             externalAdReply: {
                                 showAdAttribution: true,
-                                title: ' *🎐Maria Broadcast🎐* ',
+                                title: ' *🎐Kish Broadcast🎐* ',
                                 body: `Sent ${i.length} Group`,
                                 thumbnailUrl: 'https://telegra.ph/file/3fd18ee11521117c7c882.jpg',
                                 sourceUrl: global.link,
@@ -639,7 +639,7 @@ break
                     isBaileys
                 } = m.quoted
                 if (!isBaileys) return reply('The message was not sent by a bot!')
-                Maria.sendMessage(m.chat, {
+                Kish.sendMessage(m.chat, {
                     delete: {
                         remoteJid: m.chat,
                         fromMe: true,
@@ -669,7 +669,7 @@ break
                 setTimeout(() => {
                     var nomor = m.participant
                     const close = `*Closed* group closed by admin\nnow only admin can send messages`
-                    Maria.groupSettingUpdate(m.chat, 'announcement')
+                    Kish.groupSettingUpdate(m.chat, 'announcement')
                     reply(close)
                 }, timer)
                 break
@@ -692,7 +692,7 @@ break
                 setTimeout(() => {
                     var nomor = m.participant
                     const open = `*Opened* The group is opened by admin\nNow members can send messages`
-                    Maria.groupSettingUpdate(m.chat, 'not_announcement')
+                    Kish.groupSettingUpdate(m.chat, 'not_announcement')
                     reply(open)
                 }, timer)
                 break
@@ -701,28 +701,28 @@ break
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 let blockwww = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-                await Maria.groupParticipantsUpdate(m.chat, [blockwww], 'remove').then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                await Kish.groupParticipantsUpdate(m.chat, [blockwww], 'remove').then((res) => reply(json(res))).catch((err) => reply(json(err)))
                 break
             case 'add':
                 if (!m.isGroup) return reply(mess.group)
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 let blockwwww = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-                await Maria.groupParticipantsUpdate(m.chat, [blockwwww], 'add').then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                await Kish.groupParticipantsUpdate(m.chat, [blockwwww], 'add').then((res) => reply(json(res))).catch((err) => reply(json(err)))
                 break
             case 'promote':
                 if (!m.isGroup) return reply(mess.group)
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 let blockwwwww = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-                await Maria.groupParticipantsUpdate(m.chat, [blockwwwww], 'promote').then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                await Kish.groupParticipantsUpdate(m.chat, [blockwwwww], 'promote').then((res) => reply(json(res))).catch((err) => reply(json(err)))
                 break
             case 'demote':
                 if (!m.isGroup) return reply(mess.group)
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 let blockwwwwwa = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-                await Maria.groupParticipantsUpdate(m.chat, [blockwwwwwa], 'demote').then((res) => reply(json(res))).catch((err) => reply(json(err)))
+                await Kish.groupParticipantsUpdate(m.chat, [blockwwwwwa], 'demote').then((res) => reply(json(res))).catch((err) => reply(json(err)))
                 break
             case 'setname':
             case 'setsubject':
@@ -730,7 +730,7 @@ break
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (!text) return 'Text ?'
-                await Maria.groupUpdateSubject(m.chat, text).then((res) => reply(mess.done)).catch((err) => reply(json(err)))
+                await Kish.groupUpdateSubject(m.chat, text).then((res) => reply(mess.done)).catch((err) => reply(json(err)))
                 break
             case 'setdesc':
             case 'setdesk':
@@ -738,7 +738,7 @@ break
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (!text) return 'Text ?'
-                await Maria.groupUpdateDescription(m.chat, text).then((res) => reply(mess.done)).catch((err) => reply(json(err)))
+                await Kish.groupUpdateDescription(m.chat, text).then((res) => reply(mess.done)).catch((err) => reply(json(err)))
                 break
             case 'setppgroup':
             case 'setppgrup':
@@ -749,12 +749,12 @@ break
                 if (!quoted) return reply(`Send/Reply Image With Caption ${prefix + command}`)
                 if (!/image/.test(mime)) return reply(`Send/Reply Image With Caption ${prefix + command}`)
                 if (/webp/.test(mime)) return reply(`Send/Reply Image With Caption ${prefix + command}`)
-                var medis = await Maria.downloadAndSaveMediaMessage(quoted, 'ppbot.jpeg')
+                var medis = await Kish.downloadAndSaveMediaMessage(quoted, 'ppbot.jpeg')
                 if (args[0] == 'full') {
                     var {
                         img
                     } = await generateProfilePicture(medis)
-                    await Maria.query({
+                    await Kish.query({
                         tag: 'iq',
                         attrs: {
                             to: m.chat,
@@ -772,7 +772,7 @@ break
                     fs.unlinkSync(medis)
                     reply(mess.done)
                 } else {
-                    var memeg = await Maria.updateProfilePicture(m.chat, {
+                    var memeg = await Kish.updateProfilePicture(m.chat, {
                         url: medis
                     })
                     fs.unlinkSync(medis)
@@ -790,7 +790,7 @@ case 'tag': case 'tagall': case 'all':{
  for (let mem of participants) {
  teks += `🔮 @${mem.id.split('@')[0]}\n`
  }
- Maria.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+ Kish.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
  }
  break
  
@@ -800,7 +800,7 @@ case 'tag': case 'tagall': case 'all':{
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (!isAdmins) return reply(mess.admin)
                 if (!m.quoted) return reply(`Reply messages with captions ${prefix + command}`)
-                Maria.sendMessage(m.chat, {
+                Kish.sendMessage(m.chat, {
                     forward: m.quoted.fakeObj,
                     mentions: participants.map(a => a.id)
                 })
@@ -811,9 +811,9 @@ case 'tag': case 'tagall': case 'all':{
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (args[0] === 'close') {
-                    await Maria.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GRUP_\n\ngrup has been closed for the time being 😽*`)).catch((err) => reply(json(err)))
+                    await Kish.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`*_SUCCESSFULLY CLOSED THE GRUP_\n\ngrup has been closed for the time being 😽*`)).catch((err) => reply(json(err)))
                 } else if (args[0] === 'open') {
-                    await Maria.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`*THE GROUP HAS BEEN OPENED SUCCESSFULLY*`)).catch((err) => reply(json(err)))
+                    await Kish.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`*THE GROUP HAS BEEN OPENED SUCCESSFULLY*`)).catch((err) => reply(json(err)))
                 } else {
                     reply(`Mode ${command}\n\n\nType ${prefix + command}open/close`)
                 }
@@ -823,9 +823,9 @@ case 'tag': case 'tagall': case 'all':{
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
                 if (args[0] === 'open') {
-                    await Maria.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`Successfully Opened Group Edit Info 🕊️`)).catch((err) => reply(json(err)))
+                    await Kish.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(`Successfully Opened Group Edit Info 🕊️`)).catch((err) => reply(json(err)))
                 } else if (args[0] === 'close') {
-                    await Maria.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`Successfully Closed Group Edit Info🕊️`)).catch((err) => reply(json(err)))
+                    await Kish.groupSettingUpdate(m.chat, 'locked').then((res) => reply(`Successfully Closed Group Edit Info🕊️`)).catch((err) => reply(json(err)))
                 } else {
                     reply(`Mode ${command}\n\n\nType ${prefix + command}on/off`)
                 }
@@ -836,15 +836,15 @@ case 'tag': case 'tagall': case 'all':{
                               if (!m.isGroup) return reply(mess.group)
                   if (!isBotAdmins) return reply(mess.botAdmin)            
 
-          let response = await Maria.groupInviteCode(m.chat);
-          Maria.sendText(
+          let response = await Kish.groupInviteCode(m.chat);
+          Kish.sendText(
             m.sender,
-            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- Maria Bot\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
+            ` 🤖𝐵𝑜𝑡 𝑛𝑎𝑚𝑒:- Kish Bot\n\n🔖𝐺𝑟𝑜𝑢𝑝 𝑛𝑎𝑚𝑒:- ${groupMetadata.subject}\n\n🔰𝐺𝑟𝑜𝑢𝑝 𝑙𝑖𝑛𝑘:- https://chat.whatsapp.com/${response}`,
             m,
             { detectLink: true }
           );
         }
-        await Maria.sendMessage(m.chat, { video: { url: `https://media.tenor.com/hzWYhzhMTeEAAAPo/maria-useless.mp4` }, caption: 'I sent you the Group Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
+        await Kish.sendMessage(m.chat, { video: { url: `https://media.tenor.com/hzWYhzhMTeEAAAPo/Kish-useless.mp4` }, caption: 'I sent you the Group Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
         break
         
             case 'revoke':
@@ -852,7 +852,7 @@ case 'tag': case 'tagall': case 'all':{
                 if (!m.isGroup) return reply(mess.group)
                 if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
-                await Maria.groupRevokeInvite(m.chat)
+                await Kish.groupRevokeInvite(m.chat)
                     .then(res => {
                         reply(`Successful Reset, Group Invite Link ${groupMetadata.subject}`)
                     }).catch((err) => reply(json(err)))
@@ -861,7 +861,7 @@ case 'tag': case 'tagall': case 'all':{
             
             case "sc": case "script": case"repo": {
 const axios = require("axios");
-let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Maria-MD");
+let repoInfo = await axios.get("https://api.github.com/repos/Kish-PANDEY023/Kish-MD");
         let repo = repoInfo.data;
         console.log(repo);
 
@@ -873,10 +873,10 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
   *📁 Repo Size:* ${(repo.size/1024).toFixed(2)} MB\n
   *📅 Last Updated:* ${repo.updated_at}\n
  
-©️ *Ayush Bots inc* 
+©️ *Kish Bots inc* 
 *❝ Dont forget to give a Star ⭐ to the repo.*`
 
-        Maria.sendMessage(from, { video: { url: 'https://media.tenor.com/Zco-fadJri4AAAPo/code-matrix.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
+        Kish.sendMessage(from, { video: { url: 'https://media.tenor.com/Zco-fadJri4AAAPo/code-matrix.mp4' }, gifPlayback: true, caption: scritxt }, { quoted: m })
 }
         break;
         
@@ -889,7 +889,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
                 if (!quoted) return reply(`Reply to Video/Image With Caption ${prefix + command}`)
                 if (/image/.test(mime)) {
                     let media = await quoted.download()
-                    let encmedia = await Maria.sendImageAsSticker(m.chat, media, m, {
+                    let encmedia = await Kish.sendImageAsSticker(m.chat, media, m, {
                         
                         author: global.stickername
                     })
@@ -897,7 +897,7 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
                 } else if (isVideo || /video/.test(mime)) {
                     if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
                     let media = await quoted.download()
-                    let encmedia = await Maria.sendVideoAsSticker(m.chat, media, m, {
+                    let encmedia = await Kish.sendVideoAsSticker(m.chat, media, m, {
                         packname: global.stickername,
                        
                     })
@@ -914,10 +914,10 @@ let repoInfo = await axios.get("https://api.github.com/repos/AYUSH-PANDEY023/Mar
                 reply(mess.wait)
                 atas = text.split('|')[0] ? text.split('|')[0] : '-'
                 bawah = text.split('|')[1] ? text.split('|')[1] : '-'
-                let dwnld = await Maria.downloadAndSaveMediaMessage(qmsg)
+                let dwnld = await Kish.downloadAndSaveMediaMessage(qmsg)
                 let fatGans = await TelegraPh(dwnld)
                 let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(bawah)}/${encodeURIComponent(atas)}.png?background=${fatGans}`
-                let pop = await Maria.sendImageAsSticker(m.chat, smeme, m, {
+                let pop = await Kish.sendImageAsSticker(m.chat, smeme, m, {
                     packname: global.stickername,
                     
                 })
@@ -930,15 +930,15 @@ const swn = args.join(" ")
 const pcknm = swn.split("|")[0]
 const atnm = swn.split("|")[1]
 if (m.quoted.isAnimated === true) {
-Maria.downloadAndSaveMediaMessage(quoted, "gifee")
-Maria.sendMessage(from, {sticker:fs.readFileSync("gifee.webp")},{quoted:m})
+Kish.downloadAndSaveMediaMessage(quoted, "gifee")
+Kish.sendMessage(from, {sticker:fs.readFileSync("gifee.webp")},{quoted:m})
 } else if (/image/.test(mime)) {
 let media = await quoted.download()
-let encmedia = await Maria.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
+let encmedia = await Kish.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 } else if (/video/.test(mime)) {
 if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 Seconds!')
 let media = await quoted.download()
-let encmedia = await Maria.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
+let encmedia = await Kish.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 } else {
 reply(`Photo/Video?`)
 }
@@ -948,13 +948,13 @@ break
             case 'toimg': {
                 if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
                 reply(mess.wait)
-                let media = await Maria.downloadAndSaveMediaMessage(qmsg)
+                let media = await Kish.downloadAndSaveMediaMessage(qmsg)
                 let ran = await getRandom('.png')
                 exec(`ffmpeg -i ${media} ${ran}`, (err) => {
                     fs.unlinkSync(media)
                     if (err) return err
                     let buffer = fs.readFileSync(ran)
-                    Maria.sendMessage(m.chat, {
+                    Kish.sendMessage(m.chat, {
                         image: buffer
                     }, {
                         quoted: m
@@ -968,9 +968,9 @@ break
             case 'tovideo': {
                 if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
                 reply(mess.wait)
-                let media = await Maria.downloadAndSaveMediaMessage(qmsg)
+                let media = await Kish.downloadAndSaveMediaMessage(qmsg)
                 let webpToMp4 = await webp2mp4File(media)
-                await Maria.sendMessage(m.chat, {
+                await Kish.sendMessage(m.chat, {
                     video: {
                         url: webpToMp4.result,
                         caption: 'Convert Webp To Video'
@@ -983,19 +983,19 @@ break
             }
             break
             case 'checkdeath':
-             if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} Ayush`)
+             if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} Kish`)
               predea = await axios.get(`https://api.agify.io/?name=${q}`)
               reply(`Name : ${predea.data.name}\n*Dead At Age :* ${predea.data.age} Year.\n\n_Quick, Quick, Repent Bro, Because No One Knows About Death_`)
               break
             case 'tomp3': {
                 if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio that you want to make into MP3 with caption ${prefix + command}`)
                 reply(mess.wait)
-                let media = await Maria.downloadMediaMessage(qmsg)
+                let media = await Kish.downloadMediaMessage(qmsg)
                 let audio = await toAudio(media, 'mp4')
-                Maria.sendMessage(m.chat, {
+                Kish.sendMessage(m.chat, {
                     document: audio,
                     mimetype: 'audio/mp3',
-                    fileName: `Maria-bot.mp3`
+                    fileName: `Kish-bot.mp3`
                 }, {
                     quoted: m
                 })
@@ -1006,12 +1006,12 @@ break
             case 'toptt': {
                 if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Reply Video/Audio that you want to make into a VN with caption ${prefix + command}`)
                 reply(mess.wait)
-                let media = await Maria.downloadMediaMessage(qmsg)
+                let media = await Kish.downloadMediaMessage(qmsg)
                 let {
                     toPTT
                 } = require('./Gallery/lib/converter')
                 let audio = await toPTT(media, 'mp4')
-                Maria.sendMessage(m.chat, {
+                Kish.sendMessage(m.chat, {
                     audio: audio,
                     mimetype: 'audio/mpeg',
                     ptt: true
@@ -1024,9 +1024,9 @@ break
             case 'togif': {
                 if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
                 reply(mess.wait)
-                let media = await Maria.downloadAndSaveMediaMessage(qmsg)
+                let media = await Kish.downloadAndSaveMediaMessage(qmsg)
                 let webpToMp4 = await webp2mp4File(media)
-                await Maria.sendMessage(m.chat, {
+                await Kish.sendMessage(m.chat, {
                     video: {
                         url: webpToMp4.result,
                         caption: 'Convert Webp To Video'
@@ -1041,7 +1041,7 @@ break
             break
             case 'tourl': {
                 reply(mess.wait)
-                let media = await Maria.downloadAndSaveMediaMessage(qmsg)
+                let media = await Kish.downloadAndSaveMediaMessage(qmsg)
                 if (/image/.test(mime)) {
                     let anu = await TelegraPh(media)
                     reply(util.format(anu))
@@ -1060,7 +1060,7 @@ break
                 reply(mess.wait)
                 let anu = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
                 for (let res of anu.results) {
-                    let encmedia = await Maria.sendImageAsSticker(m.chat, res.url, m, {
+                    let encmedia = await Kish.sendImageAsSticker(m.chat, res.url, m, {
                         packname: global.stickername,
                        
                         categories: res.tags
@@ -1073,8 +1073,8 @@ break
             case 'toviewonce': {
                 if (!quoted) return reply(`Reply Image/Video`)
                 if (/image/.test(mime)) {
-                    anuan = await Maria.downloadAndSaveMediaMessage(quoted)
-                    Maria.sendMessage(m.chat, {
+                    anuan = await Kish.downloadAndSaveMediaMessage(quoted)
+                    Kish.sendMessage(m.chat, {
                         image: {
                             url: anuan
                         },
@@ -1085,8 +1085,8 @@ break
                         quoted: m
                     })
                 } else if (/video/.test(mime)) {
-                    anuanuan = await Maria.downloadAndSaveMediaMessage(quoted)
-                    Maria.sendMessage(m.chat, {
+                    anuanuan = await Kish.downloadAndSaveMediaMessage(quoted)
+                    Kish.sendMessage(m.chat, {
                         video: {
                             url: anuanuan
                         },
@@ -1110,7 +1110,7 @@ break
                 let buff = getRandom('.jpg')
                 await fs.writeFileSync('./' + buff, data)
                 let medi = fs.readFileSync('./' + buff)
-                await Maria.sendMessage(from, {
+                await Kish.sendMessage(from, {
                     image: medi,
                     caption: "Here you go!"
                 }, {
@@ -1122,7 +1122,7 @@ break
             }
             break
             case 'fliptext': {
-                if (args.length < 1) return reply(`Example:\n${prefix}fliptext Ayushy`)
+                if (args.length < 1) return reply(`Example:\n${prefix}fliptext Kishy`)
                 quere = args.join(" ")
                 flipe = quere.split('').reverse().join('')
                 reply(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
@@ -1141,10 +1141,10 @@ break
                     quote
                 } = require('./Gallery/lib/quote.js')
                 if (!q) return reply('Enter Text')
-                let ppnyauser = await await Maria.profilePictureUrl(m.sender, 'image').catch(_ => 'https://telegra.ph/file/6880771a42bad09dd6087.jpg')
+                let ppnyauser = await await Kish.profilePictureUrl(m.sender, 'image').catch(_ => 'https://telegra.ph/file/6880771a42bad09dd6087.jpg')
                 const rest = await quote(q, pushname, ppnyauser)
                 reply(mess.wait)
-                Maria.sendImageAsSticker(m.chat, rest.result, m, {
+                Kish.sendImageAsSticker(m.chat, rest.result, m, {
                     packname: `${global.stickername}`
 
                 })
@@ -1152,15 +1152,15 @@ break
             break
 
 case 'play':  case 'song': {
-Maria.sendMessage(from, { react: { text: "📥", key: m.key }}) 
+Kish.sendMessage(from, { react: { text: "📥", key: m.key }}) 
 if (!text) return reply(`Example : ${prefix + command} anime whatsapp status`)
-const Ayushplaymp3 = require('./Gallery/lib/ytdl2')
+const Kishplaymp3 = require('./Gallery/lib/ytdl2')
 let yts = require("youtube-yts")
         let search = await yts(text)
         let anup3k = search.videos[0]
-const pl= await Ayushplaymp3.mp3(anup3k.url);
+const pl= await Kishplaymp3.mp3(anup3k.url);
 reply('```✅ Song found! Sending...```');
-await Maria.sendMessage(m.chat,{
+await Kish.sendMessage(m.chat,{
     audio: fs.readFileSync(pl.path),
     fileName: anup3k.title + '.mp3',
     mimetype: 'audio/mp4', ptt: true,
@@ -1180,15 +1180,15 @@ await fs.unlinkSync(pl.path)
 break;
 
 case 'ytmp4': case 'ytvideo': {
-const Ayushvidoh = require('./Gallery/lib/ytdl2')
-if (args.length < 1 || !isUrl(text) || !Ayushvidoh.isYTUrl(text)) reply(`Where is the link??\n\nExample : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
-const vid=await Ayushvidoh.mp4(text)
+const Kishvidoh = require('./Gallery/lib/ytdl2')
+if (args.length < 1 || !isUrl(text) || !Kishvidoh.isYTUrl(text)) reply(`Where is the link??\n\nExample : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`)
+const vid=await Kishvidoh.mp4(text)
 const ytc=`
 *${themeemoji}Tittle:* ${vid.title}
 *${themeemoji}Date:* ${vid.date}
 *${themeemoji}Duration:* ${vid.duration}
 *${themeemoji}Quality:* ${vid.quality}`
-await Maria.sendMessage(m.chat,{
+await Kish.sendMessage(m.chat,{
     video: {url:vid.videoUrl},
     caption: ytc
 },{quoted:m})
@@ -1197,7 +1197,7 @@ break
 ///////////////////////////////////////////////////
 
 case 'chatgpt': case 'gpt':{
-Maria.sendMessage(from, { react: { text: "🤖", key: m.key }}) 
+Kish.sendMessage(from, { react: { text: "🤖", key: m.key }}) 
               if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
             
               const apiUrl1 = `https://vihangayt.me/tools/chatgpt?q=${encodeURIComponent(q)}`;
@@ -1212,7 +1212,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
                   
                   const message = responseData1.data;
                   const me = m.sender;
-                  await Maria.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
+                  await Kish.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
                 } else {
                   
                   const response2 = await fetch(apiUrl2);
@@ -1222,7 +1222,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
                     
                     const message = responseData2.data;
                     const me = m.sender;
-                    await Maria.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
+                    await Kish.sendMessage(m.chat, { text: message, mentions: [me] }, { quoted: m });
                   } else {
                     reply("Sorry, I couldn't fetch a response from both APIs at the moment.");
                   }
@@ -1241,7 +1241,7 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
         const apiUrl = `https://gurugpt.cyclic.app/dalle?prompt=${encodeURIComponent(q)}`;
 
         try {
-          await Maria.sendMessage(m.chat, { image: { url: apiUrl } }, { quoted: m });
+          await Kish.sendMessage(m.chat, { image: { url: apiUrl } }, { quoted: m });
         } catch (error) {
           console.error(error);
           reply("An error occurred while generating the image.");
@@ -1254,17 +1254,17 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 //////////////////////////////
             case "rules":
       
-        const helptxt = `_*📍[Rules for Maria Md usage]📍*_\n\n\n*>>>* use -support to get the Official group link in your dm.\n\n*--->* If you want to add Maria-Md in your group the contact the owner by *-owner/-mods* \n\n*--->* Dont use wrong command, use the command given in the *-help* list \n\n* Dont spam the bot with commands if Maria-Md is not responding, its means the maybe owner is offline or facing internet issue. \n\n*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BANNED* 🚫 \n\n\n*©️ Ayush Bots inc* `
+        const helptxt = `_*📍[Rules for Kish Md usage]📍*_\n\n\n*>>>* use -support to get the Official group link in your dm.\n\n*--->* If you want to add Kish-Md in your group the contact the owner by *-owner/-mods* \n\n*--->* Dont use wrong command, use the command given in the *-help* list \n\n* Dont spam the bot with commands if Kish-Md is not responding, its means the maybe owner is offline or facing internet issue. \n\n*IF YOU DONT FOLLOW THE RULES THEN YOU WILL BE BANNED* 🚫 \n\n\n*©️ Kish Bots inc* `
 
-        Maria.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
+        Kish.sendMessage(from, { video: { url: 'https://c.tenor.com/geMdtLCXZkAAAAPo/rules.mp4' }, gifPlayback: true, caption: helptxt }, { quoted: m })
 
         break
       case 'hii': case 'hi': case 'Hi':
        
         
-        let txxt = `👋🏻 Hi *${pushname}*, i am  *Maria-Md*📍\nA whatsapp bot created by: Ayush \n\n I don't have time for chit-chat Darling. Use command from *${prefix}help* list if you want me to do anything.`
+        let txxt = `👋🏻 Hi *${pushname}*, i am  *Kish-Md*📍\nA whatsapp bot created by: Kish \n\n I don't have time for chit-chat Darling. Use command from *${prefix}help* list if you want me to do anything.`
 
-        Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch1.jpg" }, caption: txxt, gifPlayback: true }, { quoted: m });
+        Kish.sendMessage(m.chat, { image: { url: "./Gallery/ch1.jpg" }, caption: txxt, gifPlayback: true }, { quoted: m });
         break
       case "support":
      
@@ -1272,25 +1272,25 @@ Maria.sendMessage(from, { react: { text: "🤖", key: m.key }})
 
 https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM`
 
-        await Maria.sendMessage(m.sender,{ image: {url: "./Gallery/sup.jpg"}, caption: `${tex}` },);
+        await Kish.sendMessage(m.sender,{ image: {url: "./Gallery/sup.jpg"}, caption: `${tex}` },);
 
-        await Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch2.jpg" }, caption: 'I sent you the support Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
+        await Kish.sendMessage(m.chat, { image: { url: "./Gallery/ch2.jpg" }, caption: 'I sent you the support Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
         break
 
       case "info":
-            Maria.sendMessage(from, { react: { text: "ℹ️", key: m.key }}) 
+            Kish.sendMessage(from, { react: { text: "ℹ️", key: m.key }}) 
         let ifx = `🌟『𝕄𝕒𝕣𝕚𝕒-𝕄𝕕 』🌟
-*🌟Description:* A WhatsApp Bot With Rich  features based on Maria
+*🌟Description:* A WhatsApp Bot With Rich  features based on Kish
 *👤Creator:*  𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚
 *🕸Version:* 1.2.0
-*🎀supportgc:* https://gg.gg/Maria-support
+*🎀supportgc:* https://gg.gg/Kish-support
 *🚦Uptime:* ${runtime(process.uptime())}\n
-*Powered by Ayush*`
-Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
+*Powered by Kish*`
+Kish.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break
 
  case 'owner': {
-                Maria.sendContact(m.chat, global.ownernumber, m)
+                Kish.sendContact(m.chat, global.ownernumber, m)
             }
             break
             
@@ -1299,7 +1299,7 @@ Maria.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, g
             
 ///////////////////////////////////////////////////
 case 'google': {
-Maria.sendMessage(from, { react: { text: "🔎", key: m.key }}) 
+Kish.sendMessage(from, { react: { text: "🔎", key: m.key }}) 
 if (!q) return reply(`Example : ${prefix + command} 𝘈𝘺𝘶𝘴𝘩 𝘱𝘢𝘯𝘥𝘦𝘺`)
 let google = require('google-it')
 google({'query': text}).then(res => {
@@ -1353,11 +1353,11 @@ var inputnumber = text.split(" ")[0]
             } else if (random_length == 4) {
                 random21 = `${status1}${status2}${status3}${dom4}`
             }
-            var anu = await Maria.onWhatsApp(`${number0}${i}${number1}@s.whatsapp.net`)
+            var anu = await Kish.onWhatsApp(`${number0}${i}${number1}@s.whatsapp.net`)
             var anuu = anu.length !== 0 ? anu : false
             try {
                 try {
-                    var anu1 = await Maria.fetchStatus(anu[0].jid)
+                    var anu1 = await Kish.fetchStatus(anu[0].jid)
                 } catch {
                     var anu1 = '401'
                 }
@@ -1448,7 +1448,7 @@ case 'dare':
          "shout you bastard in front of your mom/papa",
          "change the name to i am idiot for 24 hours",
          "slap urself firmly and send the sound of slap through voice note😂",
-         "say i love the bot owner Maria through voice note",
+         "say i love the bot owner Kish through voice note",
          "send your gf/bf pic here",
          "make any tiktok dance challenge video and put it on status, u can delete it after 5hrs",
          "breakup with your best friend for 5hrs without telling him/her that its a dare",
@@ -1460,9 +1460,9 @@ case 'dare':
           "put your father name on status for 5hrs",
           "send abusive words in any grup, excepting this grup, and send screenshot proof here"
      ]
-                   const Mariadareww = dare[Math.floor(Math.random() * dare.length)]
+                   const Kishdareww = dare[Math.floor(Math.random() * dare.length)]
                    buffer = await getBuffer(`https://graph.org/file/8dd92e67cd4019b092f53.jpg`)
-                   Maria.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ Mariadareww }, {quoted:m})
+                   Kish.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ Kishdareww }, {quoted:m})
                    break
                        
 
@@ -1541,7 +1541,7 @@ case 'truth':
                  "Mention the incident that makes you hurt that you still remember",
                  "what achievements have you got this year?",
                  "what was your worst habit at school?",
-                 "do you love the bot creator Ayush?",
+                 "do you love the bot creator Kish?",
                  "have you ever thought of taking revenge from ur teacher?",
                  "do you like current prime minister of ur country",
                  "you non veg or veg",
@@ -1561,9 +1561,9 @@ case 'truth':
                  "Whats the strangest dream you have ever had",
                  "do you play pubg, if you then send ur id number"
              ]
-                           const Mariatruthww = truth[Math.floor(Math.random() * truth.length)]
+                           const Kishtruthww = truth[Math.floor(Math.random() * truth.length)]
                            buffer = await getBuffer(`https://graph.org/file/8dd92e67cd4019b092f53.jpg`)
-                           Maria.sendMessage(from, { image: buffer, caption: '*You have chosen Truth*\n'+ Mariatruthww }, {quoted:m})
+                           Kish.sendMessage(from, { image: buffer, caption: '*You have chosen Truth*\n'+ Kishtruthww }, {quoted:m})
                            break
                            
   case 'menu': case 'help': case 'h': 
@@ -1578,8 +1578,8 @@ case 'truth':
 │⋊ ℍ𝕠𝕤𝕥: ${os.hostname()}
 │⋊ ℙ𝕝𝕒𝕥𝕗𝕠𝕣𝕞: ${os.platform()} 
 │⋊ ℝ𝕦𝕟𝕥𝕚𝕞𝕖: ${runtime(process.uptime())}
-│⋊ 𝕋𝕠𝕥𝕒𝕝𝕔𝕞𝕕: ${mariafeature()}
-│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://gg.gg/Maria-support
+│⋊ 𝕋𝕠𝕥𝕒𝕝𝕔𝕞𝕕: ${Kishfeature()}
+│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://gg.gg/Kish-support
 ╰────────────┈平和
 Here's the list of my Commands.🔖
 ${readmore}
@@ -1706,15 +1706,15 @@ ${readmore}
 🍂 Obtain the full list of NSFW commands by typing  *${prefix}nsfwmenu*`
 
   if (randomImage) {
-    Maria.sendMessage(from, { image: { url: randomImage }, caption: txt }, { quoted: m });
+    Kish.sendMessage(from, { image: { url: randomImage }, caption: txt }, { quoted: m });
   }
 
   break; 
      
        case 'circlevideo': {
 try {
-const Mariabaileys = await require("@whiskeysockets/baileys").generateWAMessageContent({ video: await m.quoted.download() }, { upload: Maria.waUploadToServer })
-await Maria.relayMessage(from, { ptvMessage: { ...Mariabaileys.videoMessage } }, {})
+const Kishbaileys = await require("@whiskeysockets/baileys").generateWAMessageContent({ video: await m.quoted.download() }, { upload: Kish.waUploadToServer })
+await Kish.relayMessage(from, { ptvMessage: { ...Kishbaileys.videoMessage } }, {})
 } catch (err) {
 reply(`Reply to a Video with Caption ${prefix + command}`)
 }
@@ -1728,7 +1728,7 @@ case "couple":
           let member = participants.map((u) => u.id);
           let orang = member[Math.floor(Math.random() * member.length)];
           let jodoh = member[Math.floor(Math.random() * member.length)];
-          Maria.sendMessage(
+          Kish.sendMessage(
             m.chat,
             {
               text: `@${orang.split("@")[0]} ❤️ @${jodoh.split("@")[0]}
@@ -1760,13 +1760,13 @@ Cieeee, What's Going On❤️💖👀`,
         
 case 'public': {
                 if (!isCreator) return reply(mess.owner)
-                Maria.public = true
+                Kish.public = true
                 reply('*Successful in Changing To Public Usage*')
             }
             break
             case 'self': {
                 if (!isCreator) return reply(mess.owner)
-                Maria.public = false
+                Kish.public = false
                 reply('*Successful in Changing To Self Usage*')
             }
             break
@@ -1799,10 +1799,10 @@ case 'public': {
 │⊳ 💦  ${prefix}ᴄʜᴀɪɴ
 └──────────⊰ 
 `
-        Maria.sendMessage(m.chat, { image: { url: "./Gallery/nsfw.jpg" }, caption: nsfwmenu }, { quoted: m });
+        Kish.sendMessage(m.chat, { image: { url: "./Gallery/nsfw.jpg" }, caption: nsfwmenu }, { quoted: m });
         break
               case 'nsfw': {
-   Maria.sendMessage(from, { react: { text: "🔞", key: m.key }}) 
+   Kish.sendMessage(from, { react: { text: "🔞", key: m.key }}) 
  if (!m.isGroup) return reply(mess.group);
                  if (!isAdmins && !isGroupOwner && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
@@ -1811,13 +1811,13 @@ if (AntiNsfw) return reply('Already activated✅️')
 isnsfw.push(from)
 fs.writeFileSync('./Gallery/database/nsfw.json', JSON.stringify(isnsfw))
 reply('Successfully activating nsfw mode in this group ✔️')
-var groupe = await Maria.groupMetadata(from)
+var groupe = await Kish.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-Maria.sendMessage(from, {text:  `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) feature has been enabled in this group, which means one can access sexual graphics from the bot!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+Kish.sendMessage(from, {text:  `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) feature has been enabled in this group, which means one can access sexual graphics from the bot!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiNsfw) return reply('Already deactivated')
 let off = isnsfw.indexOf(from)
@@ -1846,78 +1846,78 @@ case 'ribbons':
     if (!m.isGroup) return reply(mess.group);
     if (!isNsfw) return reply(mess.nsfw);
     const waifpoudd = await axios.get(`https://fantox-apis.vercel.app/${command}`);
-    Maria.sendMessage(m.chat, { caption: 'OMG🥵', image: { url: waifpoudd.data.url } }, { quoted: m });
+    Kish.sendMessage(m.chat, { caption: 'OMG🥵', image: { url: waifpoudd.data.url } }, { quoted: m });
     break;
     
         case 'blowjob':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/blowjob.json'))
-var Mariayresult = pickRandom(ahegaonsfw)
-Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
+var Kishyresult = pickRandom(ahegaonsfw)
+Kish.sendMessage(m.chat, { caption: mess.done, image: { url: Kishyresult.url } }, { quoted: m })
 break
 
 case 'cum':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/cum.json'))
-var Mariayresult = pickRandom(ahegaonsfw)
-Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
+var Kishyresult = pickRandom(ahegaonsfw)
+Kish.sendMessage(m.chat, { caption: mess.done, image: { url: Kishyresult.url } }, { quoted: m })
 break
 
 case 'foot':
  if (!m.isGroup) return reply(mess.group); 
   if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/foot.json'))
-var Mariayresult = pickRandom(ahegaonsfw)
-Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
+var Kishyresult = pickRandom(ahegaonsfw)
+Kish.sendMessage(m.chat, { caption: mess.done, image: { url: Kishyresult.url } }, { quoted: m })
 break
 
 case 'gangbang':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/gangbang.json'))
-var Mariayresult = pickRandom(ahegaonsfw)
-Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
+var Kishyresult = pickRandom(ahegaonsfw)
+Kish.sendMessage(m.chat, { caption: mess.done, image: { url: Kishyresult.url } }, { quoted: m })
 break
 
 case 'hentai':
  if (!m.isGroup) return reply(mess.group);
    if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/hentai.json'))
-var Mariayresult = pickRandom(ahegaonsfw)
-Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
+var Kishyresult = pickRandom(ahegaonsfw)
+Kish.sendMessage(m.chat, { caption: mess.done, image: { url: Kishyresult.url } }, { quoted: m })
 break
 
 case 'pussy':
  if (!m.isGroup) return reply(mess.group);   
 if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/pussy.json'))
-var Mariayresult = pickRandom(ahegaonsfw)
-Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
+var Kishyresult = pickRandom(ahegaonsfw)
+Kish.sendMessage(m.chat, { caption: mess.done, image: { url: Kishyresult.url } }, { quoted: m })
 break
 
 case 'ass':
  if (!m.isGroup) return reply(mess.group);  
  if (!isNsfw) return reply(mess.nsfw);
 var ahegaonsfw = JSON.parse(fs.readFileSync('./Gallery/nsfw/ass.json'))
-var Mariayresult = pickRandom(ahegaonsfw)
-Maria.sendMessage(m.chat, { caption: mess.done, image: { url: Mariayresult.url } }, { quoted: m })
+var Kishyresult = pickRandom(ahegaonsfw)
+Kish.sendMessage(m.chat, { caption: mess.done, image: { url: Kishyresult.url } }, { quoted: m })
 break
 
 case 'trap' :
  if (!m.isGroup) return reply(mess.group);  
  if (!isNsfw) return reply(mess.nsfw);
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)       
-Maria.sendMessage(m.chat, { caption: mess.done, image: { url:waifudd.data.url } }, { quoted: m })
+Kish.sendMessage(m.chat, { caption: mess.done, image: { url:waifudd.data.url } }, { quoted: m })
 break
 
 case 'maal': {
   if (!isNsfw) return reply(mess.nsfw);
   if (!m.isGroup) return reply(mess.group);
   reply(mess.wait);
-  await Maria.sendMessage(m.chat, {
-    image: await getBuffer('https://ayushhh.onrender.com'),
+  await Kish.sendMessage(m.chat, {
+    image: await getBuffer('https://Kishhh.onrender.com'),
     caption: 'OMG 🥵',
   }, { quoted: m });
 }
@@ -1932,7 +1932,7 @@ break;
 			const { remini } = require('./Gallery/lib/remini')
 			let media = await quoted.download()
 			let proses = await remini(media, "enhance")
-			Maria.sendMessage(m.chat, { image: proses, caption: mess.done}, { quoted: m})
+			Kish.sendMessage(m.chat, { image: proses, caption: mess.done}, { quoted: m})
 			}
 			break
               case 'awesomecheck':
@@ -1950,11 +1950,11 @@ const cex = body.slice(0)
 const cek1 = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 const cek2 = cek1[Math.floor(Math.random() * cek1.length)]
 if (mentionByReply) {
-Maria.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + `@${mentionByReply.split('@')[0]}` + '\nAnswer : ' + cek2 + '%', mentions: [mentionByReply] }, { quoted: m })
+Kish.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + `@${mentionByReply.split('@')[0]}` + '\nAnswer : ' + cek2 + '%', mentions: [mentionByReply] }, { quoted: m })
 } else if (mentionByTag[0] && isGroup) {
-Maria.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + `@${mentionByTag[0].split('@')[0]}` + '\nAnswer : ' + cek2 + '%', mentions: [mentionByTag[0]] }, { quoted: m })
+Kish.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + `@${mentionByTag[0].split('@')[0]}` + '\nAnswer : ' + cek2 + '%', mentions: [mentionByTag[0]] }, { quoted: m })
 } else if (!mentionByReply && !mentionByTag[0]) {
-Maria.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + `@${sender.split('@')[0]}` + '\nAnswer : ' + cek2 + '%', mentions: [sender] }, { quoted: m })
+Kish.sendMessage(from, { text: 'Question : *' + cex + '*\nChecker : ' + `@${sender.split('@')[0]}` + '\nAnswer : ' + cek2 + '%', mentions: [sender] }, { quoted: m })
 }
 break
 ////////
@@ -1962,7 +1962,7 @@ case 'hidetag': {
            if (!m.isGroup) return reply(mess.group)
                 if (!isAdmins && !isCreator) return reply(mess.admin)
                 if (!isBotAdmins) return reply(mess.botAdmin)
- Maria.sendMessage(m.chat, { text : args.join(" ") ? args.join(" ") : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+ Kish.sendMessage(m.chat, { text : args.join(" ") ? args.join(" ") : '' , mentions: participants.map(a => a.id)}, { quoted: m })
  }
  break
  case'admin': case 'tagadmin':{		
@@ -1976,7 +1976,7 @@ case 'hidetag': {
  for (let mem of groupAdmins) {
  teks += `🤴 @${mem.split('@')[0]}\n`
  }
- Maria.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
+ Kish.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
  }
  break
  
@@ -1998,7 +1998,7 @@ case 'hidetag': {
 
         // Send each image without any caption
         for (let i = 0; i < results.length; i++) {
-          Maria.sendMessage(m.chat, { image: { url: results[i] } }, { quoted: m });
+          Kish.sendMessage(m.chat, { image: { url: results[i] } }, { quoted: m });
         }
       }
         break;  
@@ -2012,9 +2012,9 @@ case 'runtime': {
 case 'igimage':
 case 'igimg':{
 if (!text) return reply("🧩Link?")
-let resMaria = await fetch(`https://vihangayt.me/download/instagram?url=${text}`)
-let jsonMaria = await resMaria.json()
-Maria.sendMessage(m.chat, { image: { url: jsonMaria.data.data[0].url }, caption: mess.done}, {quoted:m})
+let resKish = await fetch(`https://vihangayt.me/download/instagram?url=${text}`)
+let jsonKish = await resKish.json()
+Kish.sendMessage(m.chat, { image: { url: jsonKish.data.data[0].url }, caption: mess.done}, {quoted:m})
 .catch(console.error)
 }
 break
@@ -2023,7 +2023,7 @@ case 'igvid':{
 if (!q) return  reply("🧩Link?")
 let res = await fetch(`https://vihangayt.me/download/instagram?url=${q}`)
 let json = await res.json()
-Maria.sendMessage(m.chat, { video: { url: json.data.data[0].url }, caption: mess.done}, {quoted: m})
+Kish.sendMessage(m.chat, { video: { url: json.data.data[0].url }, caption: mess.done}, {quoted: m})
 .catch(console.error)
 }
 break
@@ -2031,9 +2031,9 @@ break
 case 'apk':
 case 'apkdl':{
 if (!text) return reply("🧩What apk u wanna download?")
-let resMaria = await fetch(`https://vihangayt.me/download/apk?id=${text}`)
-let jsonMaria = await resMaria.json()
-Maria.sendMessage(from, { document: { url: jsonMaria.data.dllink}, fileName : jsonMaria.data.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
+let resKish = await fetch(`https://vihangayt.me/download/apk?id=${text}`)
+let jsonKish = await resKish.json()
+Kish.sendMessage(from, { document: { url: jsonKish.data.dllink}, fileName : jsonKish.data.name, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
 .catch(console.error)
 }
 break
@@ -2050,7 +2050,7 @@ case 'mediafire': {
 *❖ Mime* : ${baby1[0].mime}
 *❖ Link* : ${baby1[0].link}`
 reply(`${result4}`)
-Maria.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m })
+Kish.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : m })
 }
 break
 
@@ -2071,14 +2071,14 @@ case 'welcome':
 
 
 case 'git': case 'gitclone':
-if (!args[0]) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/AYUSH-PANDEY023/Maria-Md `)
-if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcMaria(`Link invalid!!`)
+if (!args[0]) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/Kish-PANDEY023/Kish-Md `)
+if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcKish(`Link invalid!!`)
 let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let [, user, repo] = args[0].match(regex1) || []
     repo = repo.replace(/.git$/, '')
     let url = `https://api.github.com/repos/${user}/${repo}/zipball`
     let filename = (await fetch(url, {method: 'HEAD'})).headers.get('content-disposition').match(/attachment; filename=(.*)/)[1]
-    Maria.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => reply(mess.error))
+    Kish.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => reply(mess.error))
 break
 
 case '':
@@ -2089,22 +2089,22 @@ case '':
             text: needhelpmenu,
         };
 
-        Maria.sendMessage(m.chat, buttonMessage, { quoted: m });
+        Kish.sendMessage(m.chat, buttonMessage, { quoted: m });
     }
     break;
 
 case 'telestick':{
 		if (args[0] && args[0].match(/(https:\/\/t.me\/addstickers\/)/gi)) {
-		let mariaresources = await Telesticker(args[0])
-		await reply(`Sending ${mariaresources.length} stickers...`)
-		if (m.isGroup && mariaresources.length > 30) {
+		let Kishresources = await Telesticker(args[0])
+		await reply(`Sending ${Kishresources.length} stickers...`)
+		if (m.isGroup && Kishresources.length > 30) {
 			await reply('Number of stickers more than 30, bot will send it in private chat.')
-			for (let i = 0; i < mariaresources.length; i++) {
-				Maria.sendMessage(m.sender, { sticker: { url: mariaresources[i].url }})
+			for (let i = 0; i < Kishresources.length; i++) {
+				Kish.sendMessage(m.sender, { sticker: { url: Kishresources[i].url }})
 			}
 		} else {
-			for (let i = 0; i < mariaresources.length; i++) {
-				Maria.sendMessage(m.chat, { sticker: { url: mariaresources[i].url }})
+			for (let i = 0; i < Kishresources.length; i++) {
+				Kish.sendMessage(m.chat, { sticker: { url: Kishresources[i].url }})
 			}
 		}
 	} else reply(`🧩Telegram sticker Link??\n🔮Example. ${prefix + command} https://t.me/addstickers/FriendlyDeath`)
@@ -2139,7 +2139,7 @@ case 'naturetypography':
 case 'quotesunder':
 case 'shinetext':{
 
-if (!q) return reply(`🔮Example : ${prefix+command} Ayush`) 
+if (!q) return reply(`🔮Example : ${prefix+command} Kish`) 
 let link
 if (/stonetext/.test(command)) link = 'https://photooxy.com/online-3d-white-stone-text-effect-utility-411.html'
 if (/writeart/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/write-art-quote-on-wood-heart-370.html'
@@ -2169,7 +2169,7 @@ if (/metalliceffect/.test(command)) link = 'https://photooxy.com/logo-and-text-e
 if (/embroiderytext/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/create-embroidery-text-online-191.html'
 if (/flamingtext/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html'
 let dehe = await photooxy.photoOxy(link, q)
-Maria.sendMessage(m.chat, { image: { url: dehe }, caption: `${mess.done}` }, { quoted: m })
+Kish.sendMessage(m.chat, { image: { url: dehe }, caption: `${mess.done}` }, { quoted: m })
 }
 break
 
@@ -2178,13 +2178,13 @@ if (!m.isGroup) return replay(mess.grouponly)
             let [poll, opt] = text.split("|")
             if (text.split("|") < 2)
                 return await reply(
-                    `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Ayush,Maria,Owner...`
+                    `Mention question and atleast 2 options\nExample: ${prefix}poll Who is best admin?|Kish,Kish,Owner...`
                 )
             let options = []
             for (let i of opt.split(',')) {
                 options.push(i)
             }
-            await Maria.sendMessage(m.chat, {
+            await Kish.sendMessage(m.chat, {
                 poll: {
                     name: poll,
                     values: options
@@ -2199,8 +2199,8 @@ case "creategc":
           if (!args.join(" "))
             return reply(`Use ${prefix + command} groupname`);
           try {
-            let cret = await Maria.groupCreate(args.join(" "), []);
-            let response = await Maria.groupInviteCode(cret.id);
+            let cret = await Kish.groupCreate(args.join(" "), []);
+            let response = await Kish.groupInviteCode(cret.id);
             teks = ` 《༒𝙂𝙧𝙤𝙪𝙥 𝘾𝙧𝙚𝙖𝙩𝙚༒》
 
 ☤Name : ${cret.subject}
@@ -2208,11 +2208,11 @@ case "creategc":
 
 https://chat.whatsapp.com/${response}
        `;
-            Maria.sendMessage(
+            Kish.sendMessage(
               m.chat,
               {
                 text: teks,
-                mentions: await Maria.parseMention(teks),
+                mentions: await Kish.parseMention(teks),
               },
               { quoted: m }
             );
@@ -2232,22 +2232,22 @@ https://chat.whatsapp.com/${response}
 case 'developer':
 case 'dev':
     const devmod = `  🍥 *Moderators* 🍥\n\n
-*🎫Ayush* @919931122319
+*🎫Kish* @919931122319
 
-*🎫xeon* @916909137213
+*🎫xeon* @254745936840
 
-*🎫Pikachu* @918811074852
+*🎫Pikachu* @254705243111
 
-*🎫OldUser* @918602239106
+*🎫OldUser* @254745936840
  \n
-\n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks for using Maria-Md* `;
+\n📛*Don't Spam them to avoid Blocking !*\n\n For any help, type *${prefix}support* and ask in the group.\n\n*✨️Thanks for using Kish-Md* `;
 
-    Maria.sendMessage(m.chat, { text: devmod, mentions: ["919931122319@s.whatsapp.net", "918811074852@s.whatsapp.net", "916909137213@s.whatsapp.net","918602239106@s.whatsapp.net"] }, { quoted: m });
+    Kish.sendMessage(m.chat, { text: devmod, mentions: ["919931122319@s.whatsapp.net", "918811074852@s.whatsapp.net", "916909137213@s.whatsapp.net","918602239106@s.whatsapp.net"] }, { quoted: m });
     break;
 
     case 'list': case 'listmenu': {  
     const listmenu = require("./Gallery/lib/list.js");
-    Maria.sendMessage(m.chat, { video: { url: 'https://picfiles.alphacoders.com/623/623720.jpeg ' }, caption: listmenu }, { quoted: m });
+    Kish.sendMessage(m.chat, { video: { url: 'https://picfiles.alphacoders.com/623/623720.jpeg ' }, caption: listmenu }, { quoted: m });
 }
 break;
 
@@ -2255,7 +2255,7 @@ case 'help1': case 'h1':{
       
 const h3menu = require("./Gallery/lib/download.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2263,7 +2263,7 @@ case 'help2': case 'h2':{
       
 const h3menu = require("./Gallery/lib/general.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2272,7 +2272,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
       
 const h3menu = require("./Gallery/lib/owner.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h3menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2283,7 +2283,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h4menu = require("./Gallery/lib/search.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h4menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h4menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2293,7 +2293,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
          
 const h5menu = require("./Gallery/lib/group.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h5menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h5menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2302,7 +2302,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h6menu = require("./Gallery/lib/fun.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h6menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h6menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2311,7 +2311,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h7menu = require("./Gallery/lib/weeb.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h7menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h7menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2320,7 +2320,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h8menu = require("./Gallery/lib/Nsfw.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h8menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h8menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2329,7 +2329,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h9menu = require("./Gallery/lib/SnapBlend.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h9menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h9menu, gifPlayback: true }, { quoted: m });
         }
         break
   
@@ -2338,7 +2338,7 @@ Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/
                
 const h10menu = require("./Gallery/lib/other.js")
 
-Maria.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h10menu, gifPlayback: true }, { quoted: m });
+Kish.sendMessage(m.chat, { image: { url: `https://picfiles.alphacoders.com/623/623720.jpeg` }, caption: h10menu, gifPlayback: true }, { quoted: m });
         }
         break
     
@@ -2388,7 +2388,7 @@ if(isCmd){
                 }
         }
     } catch (err) {
-        Maria.sendText(modnumber + '@s.whatsapp.net', util.format(err), m)
+        Kish.sendText(modnumber + '@s.whatsapp.net', util.format(err), m)
         console.log(util.format(err))
     }
 }
