@@ -2,9 +2,9 @@ const prefix = global.prefa
   const pushname = m.pushName || "No Name"
 
 const weebmenu=`
-「 *Maria BOT* 」
+「 *Kish BOT* 」
 ♡ۣۜۜ፝͜͜͡͡✿➤ *INFO BOT*
-  ♡ۣۜۜ፝͜͜͡͡✿➤ Name: Maria BOT
+  ♡ۣۜۜ፝͜͜͡͡✿➤ Name: Kish BOT
   ♡ۣۜۜ፝͜͜͡͡✿➤ Version: 1.0
   ♡ۣۜۜ፝͜͜͡͡✿➤ Type: VPS
   ♡ۣۜۜ፝͜͜͡͡✿➤ Owner: 𝑨𝒚𝒖𝒔𝒉-𝒑𝒂𝒏𝒅𝒆𝒚
