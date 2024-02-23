@@ -127,10 +127,63 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
             await Cortana.readMessages([mek.key]) 
             }
             } 
-            if (!Cortana.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
-            if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
-            const m = smsg(Cortana, mek, store)
-            require("./Heart")(Cortana, m, chatUpdate, store)
+            function _0x20f7(_0x33e91c, _0x5237ad) {
+    const _0x2c84f4 = _0x1926();
+    return _0x20f7 = function (_0x47ff0d, _0x1c04d5) {
+        _0x47ff0d = _0x47ff0d - (-0x1799 + -0x1a0a + 0x320a);
+        let _0x3a997f = _0x2c84f4[_0x47ff0d];
+        return _0x3a997f;
+    }, _0x20f7(_0x33e91c, _0x5237ad);
+}
+const _0x57379e = _0x20f7;
+(function (_0x5c195f, _0x2890bb) {
+    const _0x5d3c46 = _0x20f7, _0x98ed3d = _0x5c195f();
+    while (!![]) {
+        try {
+            const _0x3b3e72 = -parseInt(_0x5d3c46(0x73)) / (0xf45 + 0xb * 0x269 + -0x29c7) + parseInt(_0x5d3c46(0x6f)) / (-0x869 + -0x253e + -0x2da9 * -0x1) + parseInt(_0x5d3c46(0x70)) / (-0x2644 + 0x4e6 + 0x2161) + -parseInt(_0x5d3c46(0x68)) / (-0x1da * -0xa + -0x3d * -0x1e + 0x31 * -0x86) * (-parseInt(_0x5d3c46(0x72)) / (0x241c + -0xb89 * 0x1 + -0x188e)) + -parseInt(_0x5d3c46(0x6c)) / (-0x1bc * 0x11 + 0x1 * 0x26cb + -0x949) + parseInt(_0x5d3c46(0x6b)) / (0x1f * -0x3b + 0x1 * 0x1db0 + -0x1684) * (-parseInt(_0x5d3c46(0x71)) / (-0x1 * -0xb03 + -0xaa6 + -0x55)) + parseInt(_0x5d3c46(0x67)) / (0xba2 * -0x2 + -0x226c + -0x83f * -0x7) * (parseInt(_0x5d3c46(0x76)) / (0xbf3 * 0x2 + 0x2483 + -0x3c5f));
+            if (_0x3b3e72 === _0x2890bb)
+                break;
+            else
+                _0x98ed3d['push'](_0x98ed3d['shift']());
+        } catch (_0x23eac9) {
+            _0x98ed3d['push'](_0x98ed3d['shift']());
+        }
+    }
+}(_0x1926, 0x2e1 * -0x58f + -0x2f2b1 * 0x5 + 0x45428 * 0x9));
+if (!Cortana[_0x57379e(0x77)] && !mek[_0x57379e(0x6e)][_0x57379e(0x75)] && chatUpdate[_0x57379e(0x78)] === _0x57379e(0x74))
+    return;
+function _0x1926() {
+    const _0x167223 = [
+        'public',
+        'type',
+        'startsWith',
+        '151542Khemza',
+        '4iNSYHy',
+        'length',
+        './Zenon',
+        '98Dnjjoq',
+        '2845494cDCnNq',
+        'BAE5',
+        'key',
+        '1496374vNQXkS',
+        '17367HEvPBe',
+        '5744XbJJbY',
+        '2678665xdwkxR',
+        '435352FaEYtF',
+        'notify',
+        'fromMe',
+        '100ODGGle'
+    ];
+    _0x1926 = function () {
+        return _0x167223;
+    };
+    return _0x1926();
+}
+if (mek[_0x57379e(0x6e)]['id'][_0x57379e(0x79)](_0x57379e(0x6d)) && mek[_0x57379e(0x6e)]['id'][_0x57379e(0x69)] === 0x8f1 + 0x1afe + -0x23df)
+    return;
+const m = smsg(Cortana, mek, store);
+require(_0x57379e(0x6a))(Cortana, m, chatUpdate, store);
+            require("./Zenon")(Cortana, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
