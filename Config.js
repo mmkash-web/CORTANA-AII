@@ -2,27 +2,27 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.ownernumber = ['254745936840']
-global.ownername = "💙𓆩‎✘AʏᴜSʜ✘𓆪_✰"//owner name
-global.ytname = "YT: KishBotz.inc"
-global.socialm = "GitHub: KISH-MD"
-global.location = "Indian"
+global.ownernumber = ['254112735877']
+global.ownername = "𓆩 EMMKASH‎𓆪"//owner name
+global.ytname = "YT: EMMKASH.Bots.inc"
+global.socialm = "GitHub: CORTANA-AI"
+global.location = ""
 
-global.botname = 'KISH-MD' //name of the bot
+global.botname = 'CORTANA-AI' //name of the bot
 
 //sticker details
-global.stickername = 'KISH-MD'
-global.packname = 'Sticker By'
-global.author = 'Kish Bot'
+global.stickername = 'CORTANA-AI'
+global.packname = 'Sticker By EMMKASH'
+global.author = 'EMMKASH'
 //console view/theme
-global.themeemoji = '🧩'
-global.wm = "Kish botz inc."
+global.themeemoji = '🤖'
+global.wm = "EMMKASH BOTS inc."
 
 //theme link
 global.link = 'https://chat.whatsapp.com/GyptuHxTi4DKZWaNyBUAm8'
 
 //custom prefix
-global.prefa = ['.']
+global.prefa = ['']
 
 //false=disable and true=enable
 global.welcome = false //auto welcome
@@ -38,7 +38,7 @@ global.autoread_status = false //auto view status/story
 
 //reply messages
 global.mess = {
-    done: '*here you go!* \n\n*🎀 Kish Bot 🎀*\n\n*🧩 Bot link:* \nhttps://github.com/KISH/Kish-MD\n',
+    done: '*here you go! \n\nCORTANA-AI\n\nBot link: \nhttps://github.com/EMMKASH/CORTANA-AI\n',
     prem: '*This feature can be used by premium user only*',
     admin: '*This feature can be used by admin only*',
     botAdmin: '*This feature can only be used when the bot is a group admin* ',
