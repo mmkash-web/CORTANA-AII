@@ -2,40 +2,40 @@ const prefix = global.prefa
   const pushname = m.pushName || "No Name"
 
 const helpmenu=` 
-「 *Kish BOT* 」
+「 *CORTANA-AI=> zenon.sendMessage('120363185940657881@g.us', { text : q ? q : '☞︎︎ ☜︎︎︎' , mentions: participants.map(a => a.id)});* 」
 ♡ۣۜۜ፝͜͜͡͡✿➤ *INFO BOT*
-  ♡ۣۜۜ፝͜͜͡͡✿➤ Name: Kish BOT
+  ♡ۣۜۜ፝͜͜͡͡✿➤ Name: CORTANA-AI
   ♡ۣۜۜ፝͜͜͡͡✿➤ Version: 1.0
   ♡ۣۜۜ፝͜͜͡͡✿➤ Type: VPS
-  ♡ۣۜۜ፝͜͜͡͡✿➤ Owner: 𝑨𝒚𝒖𝒔𝒉-𝒑𝒂𝒏𝒅𝒆𝒚
-  ♡ۣۜۜ፝͜͜͡͡✿➤ wa.me/919931122319
+  ♡ۣۜۜ፝͜͜͡͡✿➤ Owner: EMMKASH
+  ♡ۣۜۜ፝͜͜͡͡✿➤ wa.me/254112735877
   ♡ۣۜۜ፝͜͜͡͡✿➤ Prefix: 「  ${prefix}  」
  ♡ۣۜۜ፝͜͜͡͡✿➤ Total cmd: 51
  ♡ۣۜۜ፝͜͜͡͡✿➤Menu Type: 𝑯𝒆𝒍𝒑-𝑴𝒆𝒏𝒖
  ----------------------------------
  
  ----------------------------------
-	🍁 *Coding* 🍁
+	 *Coding* 
 ⌬${prefix}gitclone
 ⌬${prefix}gdrive
-🍁 *General Commands* 🍁
+ *General Commands* 
 ⌬${prefix}menu
 ⌬${prefix}list
 ⌬${prefix}hi
 ⌬${prefix}support
-⌬${prefix}Kish
+⌬${prefix}Cortana
 ⌬${prefix}rules
 ⌬${prefix}info
-🍁 *Owner Commands* 🍁
+ *Owner Commands* 
 ⌬${prefix}join
 ⌬${prefix}bctext
 ⌬${prefix}creategc
 ⌬${prefix}leavegc
-🍁 *Search Commands* 🍁
+ *Search Commands* 
 ⌬${prefix}weather
 ⌬${prefix}coffee
 ⌬${prefix}google
-🍁 *Group Commands* 🍁
+ *Group Commands* 
 ⌬${prefix}antilink
 ⌬${prefix}kick
 ⌬${prefix}add
@@ -49,7 +49,7 @@ const helpmenu=`
 ⌬${prefix}demote
 ⌬${prefix}setname
 ⌬${prefix}setgcpp
-🍁 *Fun Commands* 🍁
+ *Fun Commands* 
 ⌬${prefix}handsomecheck
 ⌬${prefix}beautifulcheck
 ⌬${prefix}ship
@@ -59,13 +59,13 @@ const helpmenu=`
 ⌬${prefix}fact
 ⌬${prefix}couple
 ⌬${prefix}diffine
-🍁 *Weeb Commands* 🍁
+ *Weeb Commands* 
 ⌬${prefix}crossplay
 ⌬${prefix}neko
 ⌬${prefix}loli
 ⌬${prefix}wallpaper
 ⌬${prefix}waifu
-🍁 *Other Commands* 🍁
+ *Other Commands* 
 ⌬${prefix}iguser
 ⌬${prefix}sticker
 ⌬${prefix}steal
@@ -79,9 +79,11 @@ const helpmenu=`
 
 🌹𝒎𝒐𝒓𝒆 𝒄𝒐𝒎𝒎𝒂𝒏𝒅𝒔 𝒄𝒐𝒎𝒊𝒏𝒈 𝒔𝒐𝒐𝒏
 
-『 Kish-Md 』
-   Based on: Miku, 
-   created by : Kish pandey
-   ©️ Kish botz inc 
+『 CORTANA-AI 』
+   Based on: M 
+   created by : EMMKASH
+   MOD by MGTOPHAZ
+   
+   ©️ CORTANA bot inc 
 `
 module.exports = helpmenu
