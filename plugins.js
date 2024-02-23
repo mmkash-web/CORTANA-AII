@@ -21,7 +21,6 @@
 //┃THANKS FOR CHOOSING ZENON
 //┃I WROTE THIS SCRIPT FOR EVERYONE DONT SELL IT
 //┗━━━━━━━━━━━━━━━━━━━━━━━━━
-//
 require('./Config')
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
