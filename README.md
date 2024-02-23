@@ -2,7 +2,7 @@
 <h1 align="center">⭐CORTANA-AI⭐<br></h1>
 
 <p align="center"> 
-  Konochiwa Senpai, I am "Maria md " a WhatsApp bot made by Ayush to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  I am "CORTANA-AI" a WhatsApp bot made by Ayush to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 </p>
 </br>
 
@@ -11,7 +11,7 @@
 ## ✧✧✧ What' new v1.0.2?
 
 ```
-1. pinterest added ✅️
+1. pinterest added
 2. Dalle added ✅️
 3. self/public mode added ✅️
 4. nsfw added ✅️
