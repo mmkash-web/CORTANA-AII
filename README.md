@@ -2,7 +2,7 @@
 <h1 align="center">⭐CORTANA-AI⭐<br></h1>
 
 <p align="center"> 
-  I am "CORTANA-AI" a WhatsApp bot made by Ayush to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  I am "CORTANA-AI" a WhatsApp bot made by EMMKASH to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 </p>
 </br>
 
@@ -18,7 +18,7 @@
 5. auto react added ✅️
 🔻More features and improvements!
 
--regards Ayush
+-regards EMMKASH
 ```
 </br>
 
@@ -35,14 +35,14 @@
 ## ```Bot Support Groups```
 <p align="center">
 
-<a href="https://chat.whatsapp.com/FoS7pSPtfMqBuoireKJ"><img src="https://img.shields.io/badge/Join support group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://chat.whatsapp.com/GyptuHxTi4DKZWaNyBUAm8 "><img src="https://img.shields.io/badge/Join support group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 </p>
 
 
 # Setup For Deployment 👇
 
-- FORK THE REPOSITORY [Here](https://github.com/emmkash/CORTANA-AI/fork)
+- FORK THE REPOSITORY [Here](https://github.com/Emmkash20/CORTANA-AI/fork)
 
 
 ## ` Pair with WhatsApp`
@@ -58,7 +58,7 @@
 
 
 
-<a href="https://heroku.com/deploy?template=https://github.com/emmkash/CORTANA-AI">
+<a href="https://heroku.com/deploy?template=https://github.com/Emmkash20/CORTANA-AI">
     <img src="https://www.herokucdn.com/deploy/button.png" width="160px" alt="Deploy on Heroku" >
     </a>
 
@@ -71,7 +71,7 @@
 </a>
   <br>
 <br>
-  <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="A17 on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"></a>
+  <a href="https://studio.mogenius.com/studio/cloud-space/cloud-space-overview"><img title="ZENON-AI on Mogenius" src="https://img.shields.io/badge/DEPLOY MOGENIUS-h?color=blue&style=for-the-badge&logo=genius"></a>
 </a>
 
 # Install Manually 👇
@@ -125,7 +125,7 @@ pkg install yarn
 
 pkg install imagemagick -y
 
-git clone https://github.com/emmkash/CORTANA-AI
+git clone https://github.com/Emmkash20/CORTANA-AI
 
 cd CORTANA-AI
 
@@ -146,7 +146,7 @@ npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 ```
 <br>
 <br>
- <h2 align="center"> 🦄Thanks to🦄
+ <h2 align="center"> 🦄THANKS TO 🦄
 </h2>
 
 1. **MGTOPHAZ**
