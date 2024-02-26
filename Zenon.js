@@ -1630,7 +1630,7 @@ TEXT GRAPHIC EDITOR
 🍃 NARUTOBANNER
 ✨ SHINETEXT
 
-SCROLL UP TO SEE RECENT COMMANDS`🔚
+SCROLL UP TO SEE RECENT COMMANDS`
 
   if (randomImage) {
     Cortana.sendMessage(from, { image: { url: randomImage }, caption: txt }, { quoted: m });
