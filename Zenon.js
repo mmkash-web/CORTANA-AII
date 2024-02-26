@@ -1555,7 +1555,7 @@ case 'truth':
                            break
                            
   case 'menu': case 'help': case 'h': 
-  const txt = 🔹🔸🔹 **CORTANA-AI** 🔹🔸🔹
+  const txt = '🔹🔸🔹 **CORTANA-AI** 🔹🔸🔹
 👤 **USER:** ${pushname} 
 
 🤖 **𝖡𝖮𝖳:**  ${botname}
