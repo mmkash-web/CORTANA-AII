@@ -1555,8 +1555,8 @@ case 'truth':
                            break
                            
   case 'menu': case 'help': case 'h': 
-  const txt = `╭─「 *CORTANA-AI ░ 」
-╭─│👤 USER: ${pushname} 
+  const txt = `╭─「 *CORTANA-AI* ░ 」
+╭─│👤 *USER*: ${pushname} 
 │🤖 *𝖡𝖮𝖳:*  ${botname}
 │🔖 *PREFIX:*  *${prefix}*
 │📅 *DATE:* ${xdate}
@@ -1567,9 +1567,70 @@ case 'truth':
 │🌐 *OFFICIAL GROUP:* [Official Group](https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b
 ╰────────────┈
 
+╭─*MOST USED COMMANDS*
+│🌟 HI
+│📡 PING
+│⏱️ RUNTIME
+│💻 SUPPORT
+│📋 RULES
+│📚 INFO
+│🆘 HELP
+│👤 OWNER
 
+╭─*GROUP COMMANDS👥*
+│🛠️ ANTILINK
+│🛠️ ANTIFAKE
+│🛠️ ANTIWORD
+│🚫 STOP
+│📝 FILTER
+│⚙️ GPP
+│🎉 WELCOME
+│👋 GOODBYE
+│🥾 KICK
+│➕ ADD
+│🔼 PROMOTE
+│🔽 DEMOTE
+│💌 INVITE
+│🔇 MUTE
+│🔊 UNMUTE
+│🚪 JOIN
+│🔒 REVOKED
+│ℹ️ GINF
+│🔁 COMMON
+│🔄 RESET
+│💤 INACTIVE
+│🔇 AMUTE
+│🔊 AUNMUTE
+│🛡️ PDM
+│🛡️ ANTISPAM
+│🏷️ TAG
+│🗳️ VOTE
 
-🍂 Obtain the full list of NSFW commands by typing  *${prefix}nsfwmenu*`
+╭─*AI 🤖 *
+🔄 BING
+💬 GPT
+📅 DAIL
+💬 CHATGPT
+
+*TEXT GRAPHIC EDITOR*
+🎐 SNAPBLEND🎐
+🔍 SHADOW
+✍️ WRITE
+💨 SMOKE
+🔥 BURNPAPER
+💖 ROMANTIC
+🎨 WRITEART
+🌈 RAINBOWEFFECT
+💨 SMOKYNEON
+🌊 UNDERWATEROCEAN
+☕ COFFEECUP
+💑 DOUBLELOVE
+🌱 UNDERGRASS
+❤️ LOVE
+🍃 NARUTOBANNER
+✨ SHINETEXT
+
+🍂 Obtain the fulSCROLL UP TO SEE RECENT COMMANDS*`
 
   if (randomImage) {
     Cortana.sendMessage(from, { image: { url: randomImage }, caption: txt }, { quoted: m });
