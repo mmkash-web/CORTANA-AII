@@ -42,7 +42,7 @@
 
 # Setup For Deployment 👇
 
-- FORK THE REPOSITORY [Here](https://github.com/emmkash20/CORTANA-AI/fork)
+- FORK THE REPOSITORY [Here](https://github.com/Emmkash20/CORTANA-AI/fork)
 
 
 ## ` Pair with WhatsApp`
@@ -58,7 +58,7 @@
 
 
 
-<a href="https://heroku.com/deploy?template=https://github.com/emmkash20/CORTANA-AI">
+<a href="https://heroku.com/deploy?template=https://github.com/Emmkash20/CORTANA-AI">
     <img src="https://www.herokucdn.com/deploy/button.png" width="160px" alt="Deploy on Heroku" >
     </a>
 
@@ -125,7 +125,7 @@ pkg install yarn
 
 pkg install imagemagick -y
 
-git clone https://github.com/emmkash20/CORTANA-AI
+git clone https://github.com/Emmkash20/CORTANA-AI
 
 cd CORTANA-AI
 
@@ -150,7 +150,7 @@ npm i -g pm2 && pm2 start  index.js && pm2 save && pm2 logs
 </h2>
 
 1. **𓆩 𝗘𝗠𝗠𝗞𝗔𝗦𝗛𓆪**
-   - GitHub: [MGTOPHAZ-dX](https://github.com/emmkash20)
+   - GitHub: [𓆩 𝗘𝗠𝗠𝗞𝗔𝗦𝗛𓆪](https://github.com/Emmkash20)
 
 
 Feel free to contribute and make this project even more awesome! 🌟
