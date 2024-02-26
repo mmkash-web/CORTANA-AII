@@ -23,7 +23,7 @@ let afk = require("./Gallery/lib/afk");
 const { fetchBuffer, buffergif } = require("./Gallery/lib/myfunc2")
 
 /////log
-global.modnumber = '919060791616' 
+global.modnumber = '254712591937' 
 //Gallery/database
 let ntilinkall =JSON.parse(fs.readFileSync('./Gallery/database/antilink.json'));
 const isnsfw = JSON.parse(fs.readFileSync('./Gallery/database/nsfw.json'));
@@ -147,23 +147,11 @@ const imageDirectory = './Gallery/Theme-logo';
   const randomImage = getRandomImage(imageDirectory);
 
 //group chat msg by Cortana
-const reply = (teks) => {
+const reply=(teks) => {
 Cortana.sendMessage(m.chat,
-{ text: teks,
-contextInfo:{
-mentionedJid:[sender],
-forwardingScore: 9999999,
-isForwarded: true, 
-"externalAdReply": {
-"showAdAttribution": true,
-"containsAutoReply": true,
-"title": ` ${global.botname}`,
-"body": `${ownername}`,
-"previewType": "PHOTO",
-"thumbnailUrl": ``,
-"thumbnail": fs.readFileSync(`./Gallery/thumb.jpg`),
-"sourceUrl": `${link}`}}},
-{ quoted: m})
+{ text: teks },
+{quoted: m})
+
 }
 
 async function loading () {
@@ -324,7 +312,7 @@ Cortana.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sende
 }
 	    //total features by xeon sir
 const Cortanafeature = () =>{
-            var mytext = fs.readFileSync("./Heart.js").toString()
+            var mytext = fs.readFileSync("./Zenon.js").toString()
             var numUpper = (mytext.match(/case '/g) || []).length
             return numUpper
 }
@@ -624,7 +612,7 @@ break
             case 'getcase':
                 if (!isCreator) return reply(mess.owner)
                 const getCase = (cases) => {
-                    return "case" + `'${cases}'` + fs.readFileSync("Heart.js").toString().split('case \'' + cases + '\'')[1].split("break")[0] + "break"
+                    return "case" + `'${cases}'` + fs.readFileSync("Zenon.js").toString().split('case \'' + cases + '\'')[1].split("break")[0] + "break"
                 }
                 reply(`${getCase(q)}`)
                 break
@@ -861,12 +849,12 @@ case 'tag': case 'tagall': case 'all':{
             
             case "sc": case "script": case"repo": {
 const axios = require("axios");
-let repoInfo = await axios.get("https://api.github.com/repos/Cortana-PANDEY023/CORTANA-AI");
+let repoInfo = await axios.get("https://github.com/Emmkash20/CORTANA-AI");
         let repo = repoInfo.data;
         console.log(repo);
 
-   const scritxt = `*🚀𝑴𝒂𝒓𝒊𝒂-𝑩𝒐𝒕-𝑺𝒄𝒓𝒊𝒑𝒕🚀*\n
-  *🌟Creator:* 𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚\n
+   const scritxt = `*𝑪𝑶𝑹𝑻𝑨𝑵𝑨-𝑨𝑰 𝒕-𝑺𝒄𝒓𝒊𝒑𝒕🚀*\n
+  *🌟Creator:𓆩 𝗘𝗠𝗠𝗞𝗔𝗦𝗛𓆪\n
   *🌟 Repo:* ${repo.html_url}\n
   *🌟 Total Forks:* ${repo.forks_count}\n
   *⭐ Total Stars:* ${repo.stargazers_count}\n
@@ -1159,7 +1147,7 @@ let yts = require("youtube-yts")
         let search = await yts(text)
         let anup3k = search.videos[0]
 const pl= await Cortanaplaymp3.mp3(anup3k.url);
-reply('```✅ Song found! Sending...```');
+reply('``````🎶🎵 𝙎𝙚𝙣𝙙𝙞𝙣𝙜...````');
 await Cortana.sendMessage(m.chat,{
     audio: fs.readFileSync(pl.path),
     fileName: anup3k.title + '.mp3',
@@ -1262,7 +1250,7 @@ Cortana.sendMessage(from, { react: { text: "🤖", key: m.key }})
       case 'hii': case 'hi': case 'Hi':
        
         
-        let txxt = `👋🏻 Hi *${pushname}*, i am  *CORTANA-AI*📍\nA whatsapp bot created by: Cortana \n\n I don't have time for chit-chat Darling. Use command from *${prefix}help* list if you want me to do anything.`
+        let txxt = `👋🏻 HI *${pushname}*, 𝖨 𝖠𝖬  *CORTANA-AI* \nA 𝖶𝖧𝖠𝖳𝖲𝖠𝖯𝖯 𝖡𝖮𝖳 𝖢𝖱𝖤𝖠𝖳𝖤𝖣 𝖡𝖸: 𓆩 𝗘𝗠𝗠𝗞𝗔𝗦𝗛𓆪 \n\n 𝖳𝖸𝖯𝖤 𝖧𝖤𝖫𝖯 𝖥𝖮𝖱 𝖬𝖮𝖱𝖤 𝖢𝖮𝖬𝖬𝖠𝖭𝖣𝖲 *${prefix}`
 
         Cortana.sendMessage(m.chat, { image: { url: "./Gallery/ch1.jpg" }, caption: txxt, gifPlayback: true }, { quoted: m });
         break
@@ -1279,13 +1267,13 @@ https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM`
 
       case "info":
             Cortana.sendMessage(from, { react: { text: "ℹ️", key: m.key }}) 
-        let ifx = `🌟『𝕄𝕒𝕣𝕚𝕒-𝕄𝕕 』🌟
-*🌟Description:* A WhatsApp Bot With Rich  features based on Cortana
-*👤Creator:*  𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚
+        let ifx = `🌟『𝑪𝑶𝑹𝑻𝑨𝑵𝑨-𝑨𝑰  』🌟
+*🌟Description:* A WhatsApp Bot With Rich  features based on AI
+*👤Creator:*  𓆩 𝗘𝗠𝗠𝗞𝗔𝗦𝗛𓆪
 *🕸Version:* 1.2.0
-*🎀supportgc:* https://gg.gg/Cortana-support
+*🎀supportgc:* https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b
 *🚦Uptime:* ${runtime(process.uptime())}\n
-*Powered by Cortana*`
+*POWERED BY EMMKASH TECH*`
 Cortana.sendMessage(m.chat, { image: { url: "./Gallery/ch3.jpg" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break
 
@@ -1567,39 +1555,39 @@ case 'truth':
                            break
                            
   case 'menu': case 'help': case 'h': 
-  const txt = `╭─「 *Konichiwa* 」
-│⋊ 𝕌𝕤𝕖𝕣: ${pushname} 
-│⋊ 𝔹𝕠𝕥:  ${botname}
-│⋊ ℙ𝕣𝕖𝕗𝕚𝕩:  *${prefix}*
-│⋊ 𝔻𝕒𝕥𝕖: ${xdate}
-│⋊ 𝕋𝕚𝕞𝕖:  ${xtime}
-│⋊ 𝕆𝕨𝕟𝕖𝕣: ${ownername}
-│⋊ 𝕧𝕖𝕣𝕤𝕚𝕠𝕟: ${mver}
-│⋊ ℍ𝕠𝕤𝕥: ${os.hostname()}
-│⋊ ℙ𝕝𝕒𝕥𝕗𝕠𝕣𝕞: ${os.platform()} 
-│⋊ ℝ𝕦𝕟𝕥𝕚𝕞𝕖: ${runtime(process.uptime())}
-│⋊ 𝕋𝕠𝕥𝕒𝕝𝕔𝕞𝕕: ${Cortanafeature()}
-│⋊ 𝕆𝕗𝕗𝕚𝕔𝕚𝕒𝕝 𝔾𝕣𝕠𝕦𝕡: https://gg.gg/Cortana-support
+  const txt = `╭─「 *𝑪𝑶𝑹𝑻𝑨𝑵𝑨-𝑨𝑰 ░ 」
+│✪ USER: ${pushname} 
+│☯ 𝖡𝖮𝖳:  ${botname}
+│✯ PREFIX  :  *${prefix}*
+│☯ DATE: ${xdate}
+│☯ TIME:  ${xtime}
+│✪ OWNER: ${ownername}
+│✪ VERSION: ${mver}
+│✯ HOSTED BY: ${os.hostname()}
+│☯ PLATFORM  : ${os.platform()} 
+│✯ UP-TIME: ${runtime(process.uptime())}
+│✪ TOTAL CMD : ${Cortanafeature()}
+│☯ OFFICIAL GROUP: https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b
 ╰────────────┈平和
-Here's the list of my Commands.🔖
+░░░LIST OF MY COMMANDS░░░▒
 ${readmore}
-┌──⊰ _*🧧GENERAL🧧*_
-│⊳ 🌿 ${prefix}hi
-│⊳ 🌿 ${prefix}dev
-│⊳ 🌿 ${prefix}info
-│⊳ 🌿 ${prefix}support
-│⊳ 🌿 ${prefix}rules
-│⊳ 🌿 ${prefix}help
-│⊳ 🌿 ${prefix}runtime
-│⊳ 🌿 ${prefix}ping
-│⊳ 🌿 ${prefix}owner
-│⊳ 🌿 ${prefix}script
+┌──⊰ _*GENERAL COMMANDS*_
+│⊳ ☯ ${prefix}hi
+│⊳ ✯ ${prefix}dev
+│⊳ ✪ ${prefix}info
+│⊳ ☯ ${prefix}support
+│⊳ ✪ ${prefix}rules
+│⊳ ☯ ${prefix}help
+│⊳ ✪ ${prefix}runtime
+│⊳ ☯ ${prefix}ping
+│⊳ ✯ ${prefix}owner
+│⊳ ☯ ${prefix}script
 └──────────⊰
 
-┌──⊰ _*🧩OWNER🧩*_
-│⊳ ♠️ ${prefix}session
+┌──⊰ _*OWNER*_
+│⊳ ♠ ${prefix}session
 │⊳ ♠️ ${prefix}join
-│⊳ ♠️ ${prefix}mode *[self/public]*
+│⊳ ♠ ${prefix}mode *[self/public]*
 │⊳ ♠️ ${prefix}shutdown
 │⊳ ♠️ ${prefix}restart
 │⊳ ♠️ ${prefix}autoread *[option]*
@@ -1616,23 +1604,23 @@ ${readmore}
 │⊳ ♠️ ${prefix}creategc
 └──────────⊰
 
-┌──⊰ _*👮🏻‍♂️GROUP👮🏻‍♂️*_
-│⊳ 🍁 ${prefix}antilink
-│⊳ 🍁 ${prefix}closetime
-│⊳ 🍁 ${prefix}opentime
-│⊳ 🍁 ${prefix}kick
-│⊳ 🍁 ${prefix}promote
-│⊳ 🍁 ${prefix}demote
-│⊳ 🍁 ${prefix}setdesc
-│⊳ 🍁 ${prefix}setppgc
-│⊳ 🍁 ${prefix}tagall
-│⊳ 🍁 ${prefix}hidetag
-│⊳ 🍁 ${prefix}totag
-│⊳ 🍁 ${prefix}group *[option]*
-│⊳ 🍁 ${prefix}editinfo
-│⊳ 🍁 ${prefix}gclink
-│⊳ 🍁 ${prefix}revoke
-│⊳ 🍁 ${prefix}listonline
+┌──⊰ _*🫂GROUP👥_
+│⊳ ☯ ${prefix}antilink
+│⊳ ✯ ${prefix}closetime
+│⊳ ☯ ${prefix}opentime
+│⊳ ✯ ${prefix}kick
+│⊳ ☯ ${prefix}promote
+│⊳ ✯ ${prefix}demote
+│⊳ ☯ ${prefix}setdesc
+│⊳ ✯ ${prefix}setppgc
+│⊳ ☯ ${prefix}tagall
+│⊳ ✯ ${prefix}hidetag
+│⊳ ☯ ${prefix}totag
+│⊳ ✯ ${prefix}group *[option]*
+│⊳ ☯ ${prefix}editinfo
+│⊳ ✯ ${prefix}gclink
+│⊳ ☯ ${prefix}revoke
+│⊳ ✯ ${prefix}listonline
 └──────────⊰
 
 ┌──⊰ _*🎉FUN🎉*_
@@ -1653,40 +1641,40 @@ ${readmore}
 │⊳🎟️ ${prefix}awesomecheck 
 └──────────⊰
 ┌──⊰ _*📂download📂*_
-│⊳ 📥 ${prefix}play
-│⊳ 📥 ${prefix}ytmp3
-│⊳ 📥 ${prefix}ytmp4
-│⊳ 📥 ${prefix}igimage 
-│⊳ 📥 ${prefix}igvideo 
+│⊳ 🎧 ${prefix}play
+│⊳ 🎶🎵 ${prefix}ytmp3
+│⊳ 📽 ${prefix}ytmp4
+│⊳ 📸 ${prefix}igimage 
+│⊳ 🎬 ${prefix}igvideo 
 │⊳ 📥 ${prefix}gitclone
 │⊳ 📥 ${prefix}pinterest
 │⊳ 📥 ${prefix}apk
 └──────────⊰
 ┌──⊰ _*🎐SnapBlend🎐*_
-│⊳🎀 ${prefix}shadow
+│⊳🎯 ${prefix}shadow
 │⊳🎀 ${prefix}write
-│⊳🎀 ${prefix}smoke
+│⊳🎯 ${prefix}smoke
 │⊳🎀 ${prefix}burnpaper
-│⊳🎀 ${prefix}romantic
+│⊳🎯 ${prefix}romantic
 │⊳🎀 ${prefix}writeart
-│⊳🎀 ${prefix}rainboweffect
+│⊳🎯 ${prefix}rainboweffect
 │⊳🎀 ${prefix}smokyneon
-│⊳🎀 ${prefix}underwaterocean
+│⊳🎯 ${prefix}underwaterocean
 │⊳🎀 ${prefix}coffecup
-│⊳🎀 ${prefix}doublelove
+│⊳🎯 ${prefix}doublelove
 │⊳🎀 ${prefix}undergrass
-│⊳🎀 ${prefix}love
+│⊳🎯 ${prefix}love
 │⊳🎀 ${prefix}narutobanner
 │⊳🎀 ${prefix}shinetext
 └──────────⊰
 ┌──⊰ _*⛩️OTHERS⛩️*_
-│⊳ 🏮 ${prefix}sticker
+│⊳ 🧩 ${prefix}sticker
 │⊳ 🏮 ${prefix}qc
 │⊳ 🏮 ${prefix}smeme
 │⊳ 🏮 ${prefix}take
 │⊳ 🏮 ${prefix}toimage
-│⊳ 🏮 ${prefix}tovideo
-│⊳ 🏮 ${prefix}toaudio
+│⊳ 📽 ${prefix}tovideo
+│⊳ 🎶 ${prefix}toaudio
 │⊳ 🏮 ${prefix}tomp3
 │⊳ 🏮 ${prefix}tovn
 │⊳ 🏮 ${prefix}togif
@@ -1694,12 +1682,12 @@ ${readmore}
 │⊳ 🏮 ${prefix}toqr
 │⊳ 🏮 ${prefix}toviewonce
 │⊳ 🏮 ${prefix}fliptext
-│⊳ 🏮 ${prefix}emojimix
+│⊳ 😂 ${prefix}emojimix
 │⊳ 🏮 ${prefix}circlevideo
-│⊳ 🏮 ${prefix}google
+│⊳ 🕵️ ${prefix}google
 │⊳ 🏮 ${prefix}pinterest
 │⊳ 🏮 ${prefix}dalle
-│⊳ 🏮 ${prefix}gpt
+│⊳ 🙋 ${prefix}gpt
 └──────────⊰
 🍂 To enable NSFW (Admin only!), enter  *${prefix}nsfw* 
 
@@ -2071,7 +2059,7 @@ case 'welcome':
 
 
 case 'git': case 'gitclone':
-if (!args[0]) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/EMMKASH/CORTANA-AI `)
+if (!args[0]) return reply(`🧩Where is the link?\n🔮Example :\n${prefix}${command} https://github.com/EMMKASH20/CORTANA-AI `)
 if (!isUrl(args[0]) && !args[0].includes('github.com')) return replygcCortana(`Link invalid!!`)
 let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     let [, user, repo] = args[0].match(regex1) || []
@@ -2081,17 +2069,9 @@ let regex1 = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     Cortana.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' }, { quoted: m }).catch((err) => reply(mess.error))
 break
 
-case '':
-    if (isCmd) {
-        const needhelpmenu = `*Did You Mean ${prefix}help*`;
 
-        let buttonMessage = {
-            text: needhelpmenu,
-        };
+    
 
-        Cortana.sendMessage(m.chat, buttonMessage, { quoted: m });
-    }
-    break;
 
 case 'telestick':{
 		if (args[0] && args[0].match(/(https:\/\/t.me\/addstickers\/)/gi)) {
@@ -2142,7 +2122,7 @@ case 'shinetext':{
 if (!q) return reply(`🔮Example : ${prefix+command} Cortana`) 
 let link
 if (/stonetext/.test(command)) link = 'https://photooxy.com/online-3d-white-stone-text-effect-utility-411.html'
-if (/writeart/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/write-art-quote-on-wood-heart-370.html'
+if (/writeart/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/write-art-quote-on-wood-Zenon-370.html'
 if (/summertext/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/3d-summer-text-effect-367.html'
 if (/wolfmetaltext/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/create-a-wolf-metal-text-effect-365.html'
 if (/nature3dtext/.test(command)) link = 'https://photooxy.com/logo-and-text-effects/make-nature-3d-text-effects-364.html'
@@ -2224,14 +2204,11 @@ https://chat.whatsapp.com/${response}
         case 'test': case 'p': case 'ping': 
         let timestampe = speed()
         let latensie = speed() - timestampe
-         reply(`🧧Testing successfull, Bot is active\n\n📍*ping* ${latensie.toFixed(4)} miliseconds\n\n🎀Type ${prefix}help to display the menu`)
-        break   
+         reply(`█▓▒▒░░░TEST SUCCESSFUL BOT ACTIVE✅░░░▒▒▓█\n\n\
+         ${latensie.toFixed(4)} miliseconds\n\n Type ${prefix}help to display the menu`)
+        break;   
     
         
-case 'mods':
-case 'developer':
- case 'repo':
-case 'dev': {
 
 case 'mods':
 case 'developer':
@@ -2288,8 +2265,8 @@ var _0x2ede1c = _0x58a8;
         }
     }
 }(_0x4616, 0xf * 0xa42 + 0x2a2fe * 0x1 + -0x8cfb), Cortana[_0x2ede1c(0x18d) + 'e'](m[_0x2ede1c(0x17f)], { 'text': _0x2ede1c(0x190) + _0x2ede1c(0x180) + _0x2ede1c(0x18f) + _0x2ede1c(0x181) + _0x2ede1c(0x182) + _0x2ede1c(0x18a) }, { 'quoted': m }));   
-
-break;
+} 
+break; 
 
     case 'list': case 'listmenu': {  
     const listmenu = require("./Gallery/lib/list.js");

@@ -4,7 +4,7 @@ const chalk = require('chalk')
 //contact details
 global.ownernumber = ['254112735877']
 global.ownername = "𓆩 EMMKASH‎𓆪"//owner name
-global.ytname = "YT: EMMKASH.Bots.inc"
+global.ytname = "YT: EMMKASH TECH.Bots.inc"
 global.socialm = "GitHub: CORTANA-AI"
 global.location = ""
 
@@ -16,13 +16,13 @@ global.packname = 'Sticker By EMMKASH'
 global.author = 'EMMKASH'
 //console view/theme
 global.themeemoji = '🤖'
-global.wm = "EMMKASH BOTS inc."
+global.wm = "EMMKASH TECH BOTS inc."
 
 //theme link
-global.link = 'https://chat.whatsapp.com/GyptuHxTi4DKZWaNyBUAm8'
+//global.link = 'https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b'
 
 //custom prefix
-global.prefa = ['']
+global.prefa = ['.']
 
 //false=disable and true=enable
 global.welcome = false //auto welcome
@@ -38,7 +38,7 @@ global.autoread_status = false //auto view status/story
 
 //reply messages
 global.mess = {
-    done: '*here you go! \n\nCORTANA-AI\n\nBot link: \nhttps://github.com/EMMKASH/CORTANA-AI\n',
+    done: '*here you go! \n\nCORTANA-AI\n\nBot link: \nhttps://github.com/EMMKASH20/CORTANA-AI\n',
     prem: '*This feature can be used by premium user only*',
     admin: '*This feature can be used by admin only*',
     botAdmin: '*This feature can only be used when the bot is a group admin* ',

@@ -1,16 +1,16 @@
 // ⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈
-//▮ZENON BOT INC 2023 ®️ALL RIGHTS RESERVED
+//▮ CORTANA-AI INC 2022 ®️ALL RIGHTS RESERVED
 //▮
 //▮FORK AND DON'T FORGET TO GIVE A STAR
 //▮
-//▮  Https://github.com/MGTOPHAZ/ZENON-AI 
+//▮  https://github.com/emmkash20/CORTANA-AI
 //▮
-//▮THIS SOFTWARE IS UNDER IS COPYRIGHT
+//▮THIS SOFTWARE IS UNDER COPYRIGHT
 //▮
 //▮REPORT ABUSE OF THIS SOFTWARE EMAIL US
 //▮
-//▮WHATSAPP US : +254705243111
-//▮EMAIL US Mgtophaz@gmail.com 
+//▮WHATSAPP US : +2541112735877
+//▮EMAIL US  Emmkash20@gmailm.com
 //▮
 //╰▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 //
@@ -25,7 +25,6 @@ require('./Config')
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
-const moment = require('moment-timezone');
 const chalk = require('chalk')
 const FileType = require('file-type')
 const path = require('path')
@@ -91,7 +90,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
          phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +254705243111")))
+            console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +25411273587")))
             process.exit(0)
          }
       } else {
@@ -182,61 +181,18 @@ if (mek[_0x57379e(0x6e)]['id'][_0x57379e(0x79)](_0x57379e(0x6d)) && mek[_0x57379
     return;
 const m = smsg(Cortana, mek, store);
 require(_0x57379e(0x6a))(Cortana, m, chatUpdate, store);
-            require("./Zenon")(Cortana, m, chatUpdate, store)
+
         } catch (err) {
             console.log(err)
         }
     })
 
-   function _0x3e8d() {
-    var _0x1c5d20 = [
-        'sendContac',
-        '2510yJvEPA',
-        '2754OPmMXV',
-        '184iXPIHs',
-        '624249TfZvIp',
-        '3776nvzlWn',
-        '1623780TCovEA',
-        '33LhCuUp',
-        '281477LKUhSn',
-        '2341235NxvgTA',
-        '70evyfNv',
-        '254TbGVQN',
-        '3160686iKiRXj'
-    ];
-    _0x3e8d = function () {
-        return _0x1c5d20;
-    };
-    return _0x3e8d();
-}
-var _0xe234ec = _0x5747;
-function _0x5747(_0x46cf73, _0x5f0f8a) {
-    var _0x18e2ff = _0x3e8d();
-    return _0x5747 = function (_0x2ccaf0, _0x212629) {
-        _0x2ccaf0 = _0x2ccaf0 - (0x10c3 * 0x1 + -0x1 * -0x12be + -0x22fa);
-        var _0x5736f0 = _0x18e2ff[_0x2ccaf0];
-        return _0x5736f0;
-    }, _0x5747(_0x46cf73, _0x5f0f8a);
-}
-(function (_0x27c02e, _0x2cc9a4) {
-    var _0x3195b3 = _0x5747, _0x4f3eb3 = _0x27c02e();
-    while (!![]) {
-        try {
-            var _0x1b62f4 = parseInt(_0x3195b3(0x91)) / (-0x1 * 0x59a + -0x4 * 0x8f9 + -0xdd5 * -0x3) * (-parseInt(_0x3195b3(0x87)) / (-0x29 * -0x55 + 0xbb9 + -0x1954)) + parseInt(_0x3195b3(0x88)) / (0x126d + 0x25db * -0x1 + 0x3 * 0x67b) * (parseInt(_0x3195b3(0x8b)) / (0x2 * 0x253 + -0x1dcd + 0x192b)) + parseInt(_0x3195b3(0x8f)) / (-0x7e * 0x2e + -0x109b + 0x2744) + -parseInt(_0x3195b3(0x92)) / (0x1c23 + 0x9c + -0x13 * 0x183) + -parseInt(_0x3195b3(0x8e)) / (0x1b5f + 0x1752 + -0x2 * 0x1955) * (-parseInt(_0x3195b3(0x89)) / (-0x17 * 0x1 + -0x994 * -0x4 + -0xcbb * 0x3)) + parseInt(_0x3195b3(0x8a)) / (0x1 * -0x1ed9 + 0x13a3 + 0xb3f) * (-parseInt(_0x3195b3(0x90)) / (0x501 * -0x3 + 0x1eb1 + -0xfa4)) + -parseInt(_0x3195b3(0x8d)) / (-0x1 * 0x1813 + 0x82 + 0x179c) * (parseInt(_0x3195b3(0x8c)) / (-0x6fd * 0x1 + 0x1 * 0xb53 + 0xb7 * -0x6));
-            if (_0x1b62f4 === _0x2cc9a4)
-                break;
-            else
-                _0x4f3eb3['push'](_0x4f3eb3['shift']());
-        } catch (_0x492252) {
-            _0x4f3eb3['push'](_0x4f3eb3['shift']());
-        }
-    }
-}(_0x3e8d, 0x13 * -0x4ff3 + 0x50140 * -0x2 + 0x25 * 0xa57e), Cortana[_0xe234ec(0x93) + 't']); = async (jid, kon, quoted = '', opts = {}) => {
+ Cortana.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 	let list = []
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await Cortana.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await Cortana.getName(i + '@s.whatsapp.net')}\nFN:${await Cortana.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:Mgtophaz@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://github.com/MGTOPHAZ/ZENON-AI\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;kenya;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await Cortana.getName(i + '@s.whatsapp.net')}\nFN:${await Cortana.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:Emmkash20@gmail.com \nitem2.X-ABLabel:Email\nitem3.URL:https://github.com/emmkash20/CORTANA-AI\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;kenya;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	Cortana.sendMessage(jid, { contacts: { displayName: global.ownername, contacts: list }, ...opts }, { quoted })
@@ -495,18 +451,18 @@ if (e.includes("Value not found")) return
 console.log('Caught exception: ', err)
 })
 // ⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈
-//▮ZENON BOT INC 2023 ®️ALL RIGHTS RESERVED
+//▮CORTAN-AI  INC 2022 ®️ALL RIGHTS RESERVED
 //▮
 //▮FORK AND DON'T FORGET TO GIVE A STAR
 //▮
-//▮  Https://github.com/MGTOPHAZ/ZENON-AI 
+//▮  https://github.com/emmkash20/CORTANA-AI
 //▮
 //▮THIS SOFTWARE IS UNDER IS COPYRIGHT
 //▮
 //▮REPORT ABUSE OF THIS SOFTWARE EMAIL US
 //▮
-//▮WHATSAPP US : +254705243111
-//▮EMAIL US Mgtophaz@gmail.com 
+//▮WHATSAPP US : +254112735877
+//▮EMAIL US Emmkash20@gmail.com 
 //▮
 //╰▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 //
@@ -514,7 +470,7 @@ console.log('Caught exception: ', err)
 //┃THIS SOFTWARE INCLUDES 
 //┃SOME ENCRYPTED FILES
 //┃
-//┃THANKS FOR CHOOSING ZENON
+//┃THANKS FOR CHOOSING CORTANA-AI
 //┃I WROTE THIS SCRIPT FOR EVERYONE DONT SELL IT
 //┗━━━━━━━━━━━━━━━━━━━━━━━━━
 //
