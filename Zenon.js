@@ -1558,27 +1558,27 @@ case 'truth':
   const txt = `╭─「 *𝑪𝑶𝑹𝑻𝑨𝑵𝑨-𝑨𝑰 ░ 」
 │👤 **USER:** ${pushname} 
 
-🤖 **𝖡𝖮𝖳:**  ${botname}
+🤖 *𝖡𝖮𝖳:*  ${botname}
 
-🔖 **PREFIX:**  *${prefix}*
+🔖 *PREFIX:*  *${prefix}*
 
-📅 **DATE:** ${xdate}
+📅 *DATE:* ${xdate}
 
-🕰️ **TIME:**  ${xtime}
+🕰️ *TIME:*  ${xtime}
 
-👑 **OWNER:** ${ownername}
+👑 *OWNER:* ${ownername}
 
-🔰 **VERSION:** ${mver}
+🔰 *VERSION:* ${mver}
 
-🖥️ **HOSTED BY:** ${os.hostname()}
+🖥️ *HOSTED BY:* ${os.hostname()}
 
-💻 **PLATFORM:** ${os.platform()} 
+💻 *PLATFORM:* ${os.platform()} 
 
-⏳ **UP-TIME:** ${runtime(process.uptime())}
+⏳ *UP-TIME:* ${runtime(process.uptime())}
 
-🔧 **TOTAL CMD:** ${Cortanafeature()}
+🔧 *TOTAL CMD:* ${Cortanafeature()}
 
-🌐 **OFFICIAL GROUP:** [Official Group](https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b
+🌐 *OFFICIAL GROUP:* [Official Group](https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b
 ╰────────────┈
 ░░░LIST OF MY COMMANDS░░░▒
 ${readmore}
