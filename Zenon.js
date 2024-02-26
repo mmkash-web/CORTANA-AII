@@ -1556,7 +1556,7 @@ case 'truth':
                            
   case 'menu': case 'help': case 'h': 
   const txt = `╭─「 *𝑪𝑶𝑹𝑻𝑨𝑵𝑨-𝑨𝑰 ░ 」
-╭─│👤 **USER:** ${pushname} 
+╭─│👤 *USER:* ${pushname} 
 │
 │🤖 *𝖡𝖮𝖳:*  ${botname}
 │
@@ -1581,125 +1581,9 @@ case 'truth':
 │🌐 *OFFICIAL GROUP:* [Official Group](https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b
 ╰────────────┈
 ░░░LIST OF MY COMMANDS░░░▒
-${readmore}
-┌──⊰ _*GENERAL COMMANDS*_
-│⊳ ☯ ${prefix}hi
-│⊳ ✯ ${prefix}dev
-│⊳ ✪ ${prefix}info
-│⊳ ☯ ${prefix}support
-│⊳ ✪ ${prefix}rules
-│⊳ ☯ ${prefix}help
-│⊳ ✪ ${prefix}runtime
-│⊳ ☯ ${prefix}ping
-│⊳ ✯ ${prefix}owner
-│⊳ ☯ ${prefix}script
-└──────────⊰
 
-┌──⊰ _*OWNER*_
-│⊳ ♠ ${prefix}session
-│⊳ ♠️ ${prefix}join
-│⊳ ♠ ${prefix}mode *[self/public]*
-│⊳ ♠️ ${prefix}shutdown
-│⊳ ♠️ ${prefix}restart
-│⊳ ♠️ ${prefix}autoread *[option]*
-│⊳ ♠️ ${prefix}autotyping *[option]*
-│⊳ ♠️ ${prefix}autorecording *[option]*
-│⊳ ♠️ ${prefix}autorecordtyp *[option]*
-│⊳ ♠️ ${prefix}autobio *[option]*
-│⊳ ♠️ ${prefix}autoswview *[option]*
-│⊳ ♠️ ${prefix}setppbot
-│⊳ ♠️ ${prefix}block
-│⊳ ♠️ ${prefix}unblock
-│⊳ ♠️ ${prefix}backup
-│⊳ ♠️ ${prefix}getcase
-│⊳ ♠️ ${prefix}creategc
-└──────────⊰
 
-┌──⊰ _*🫂GROUP👥_
-│⊳ ☯ ${prefix}antilink
-│⊳ ✯ ${prefix}closetime
-│⊳ ☯ ${prefix}opentime
-│⊳ ✯ ${prefix}kick
-│⊳ ☯ ${prefix}promote
-│⊳ ✯ ${prefix}demote
-│⊳ ☯ ${prefix}setdesc
-│⊳ ✯ ${prefix}setppgc
-│⊳ ☯ ${prefix}tagall
-│⊳ ✯ ${prefix}hidetag
-│⊳ ☯ ${prefix}totag
-│⊳ ✯ ${prefix}group *[option]*
-│⊳ ☯ ${prefix}editinfo
-│⊳ ✯ ${prefix}gclink
-│⊳ ☯ ${prefix}revoke
-│⊳ ✯ ${prefix}listonline
-└──────────⊰
 
-┌──⊰ _*🎉FUN🎉*_
-│⊳🎟️ ${prefix}truth
-│⊳🎟️ ${prefix}dare
-│⊳🎟️ ${prefix}couple 
-│⊳🎟️ ${prefix}checkdeath
-│⊳🎟️ ${prefix}uglycheck
-│⊳🎟️ ${prefix}lovelycheck
-│⊳🎟️ ${prefix}prettycheck
-│⊳🎟️ ${prefix}hornycheck
-│⊳🎟️ ${prefix}lesbiancheck
-│⊳🎟️ ${prefix}lesbicheck
-│⊳🎟️ ${prefix}lesbiancheck
-│⊳🎟️ ${prefix}cutecheck
-│⊳🎟️ ${prefix}gaycheck
-│⊳🎟️ ${prefix}greatcheck
-│⊳🎟️ ${prefix}awesomecheck 
-└──────────⊰
-┌──⊰ _*📂download📂*_
-│⊳ 🎧 ${prefix}play
-│⊳ 🎶🎵 ${prefix}ytmp3
-│⊳ 📽 ${prefix}ytmp4
-│⊳ 📸 ${prefix}igimage 
-│⊳ 🎬 ${prefix}igvideo 
-│⊳ 📥 ${prefix}gitclone
-│⊳ 📥 ${prefix}pinterest
-│⊳ 📥 ${prefix}apk
-└──────────⊰
-┌──⊰ _*🎐SnapBlend🎐*_
-│⊳🎯 ${prefix}shadow
-│⊳🎀 ${prefix}write
-│⊳🎯 ${prefix}smoke
-│⊳🎀 ${prefix}burnpaper
-│⊳🎯 ${prefix}romantic
-│⊳🎀 ${prefix}writeart
-│⊳🎯 ${prefix}rainboweffect
-│⊳🎀 ${prefix}smokyneon
-│⊳🎯 ${prefix}underwaterocean
-│⊳🎀 ${prefix}coffecup
-│⊳🎯 ${prefix}doublelove
-│⊳🎀 ${prefix}undergrass
-│⊳🎯 ${prefix}love
-│⊳🎀 ${prefix}narutobanner
-│⊳🎀 ${prefix}shinetext
-└──────────⊰
-┌──⊰ _*⛩️OTHERS⛩️*_
-│⊳ 🧩 ${prefix}sticker
-│⊳ 🏮 ${prefix}qc
-│⊳ 🏮 ${prefix}smeme
-│⊳ 🏮 ${prefix}take
-│⊳ 🏮 ${prefix}toimage
-│⊳ 📽 ${prefix}tovideo
-│⊳ 🎶 ${prefix}toaudio
-│⊳ 🏮 ${prefix}tomp3
-│⊳ 🏮 ${prefix}tovn
-│⊳ 🏮 ${prefix}togif
-│⊳ 🏮 ${prefix}tourl
-│⊳ 🏮 ${prefix}toqr
-│⊳ 🏮 ${prefix}toviewonce
-│⊳ 🏮 ${prefix}fliptext
-│⊳ 😂 ${prefix}emojimix
-│⊳ 🏮 ${prefix}circlevideo
-│⊳ 🕵️ ${prefix}google
-│⊳ 🏮 ${prefix}pinterest
-│⊳ 🏮 ${prefix}dalle
-│⊳ 🙋 ${prefix}gpt
-└──────────⊰
 🍂 To enable NSFW (Admin only!), enter  *${prefix}nsfw* 
 
 🍂 Obtain the full list of NSFW commands by typing  *${prefix}nsfwmenu*`
@@ -1712,7 +1596,7 @@ ${readmore}
      
        case 'circlevideo': {
 try {
-const Cortanabaileys = await require("@whiskeysockets/baileys").generateWAMessageContent({ video: await m.quoted.download() }, { upload: Cortana.waUploadToServer })
+const Cortanabaileys = await require("@whiskeysockets/baileys").generateWAMessageContent({ video: await m.quoted.download() }, { upload: CortaServer })
 await Cortana.relayMessage(from, { ptvMessage: { ...Cortanabaileys.videoMessage } }, {})
 } catch (err) {
 reply(`Reply to a Video with Caption ${prefix + command}`)
