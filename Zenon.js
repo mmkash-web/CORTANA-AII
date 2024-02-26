@@ -1555,36 +1555,19 @@ case 'truth':
                            break
                            
   case 'menu': case 'help': case 'h': 
-  const txt = `╭─「 *𝑪𝑶𝑹𝑻𝑨𝑵𝑨-𝑨𝑰 ░ 」
-╭─│👤 *USER:* ${pushname} 
-│
+  const txt = `╭─「 *CORTANA-AI ░ 」
+╭─│👤 USER: ${pushname} 
 │🤖 *𝖡𝖮𝖳:*  ${botname}
-│
 │🔖 *PREFIX:*  *${prefix}*
-│
 │📅 *DATE:* ${xdate}
-│
-│🕰️ *TIME:*  ${xtime}
-│
 │👑 *OWNER:* ${ownername}
-│
-│🔰 *VERSION:* ${mver}
-│
-│🖥️ *HOSTED BY:* ${os.hostname()}
-│
 │💻 *PLATFORM:* ${os.platform()} 
-│
 │⏳ *UP-TIME:* ${runtime(process.uptime())}
-│
 │🔧 *TOTAL CMD:* ${Cortanafeature()}
-│
 │🌐 *OFFICIAL GROUP:* [Official Group](https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b
 ╰────────────┈
-░░░LIST OF MY COMMANDS░░░▒
 
 
-
-🍂 To enable NSFW (Admin only!), enter  *${prefix}nsfw* 
 
 🍂 Obtain the full list of NSFW commands by typing  *${prefix}nsfwmenu*`
 
