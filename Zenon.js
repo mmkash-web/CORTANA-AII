@@ -1567,7 +1567,7 @@ case 'truth':
 │🌐 *OFFICIAL GROUP:* [Official Group](https://chat.whatsapp.com/L49QBvVDWX0EwT3kqAZI9b
 ╰────────────┈
 
-╭─*MOST USED COMMANDS*
+╭─MOST USED COMMANDS⏬
 │🌟 HI
 │📡 PING
 │⏱️ RUNTIME
@@ -1577,7 +1577,7 @@ case 'truth':
 │🆘 HELP
 │👤 OWNER
 
-╭─*GROUP COMMANDS👥*
+╭─GROUP COMMANDS👥
 │🛠️ ANTILINK
 │🛠️ ANTIFAKE
 │🛠️ ANTIWORD
@@ -1606,13 +1606,13 @@ case 'truth':
 │🏷️ TAG
 │🗳️ VOTE
 
-╭─*AI 🤖 *
+╭─AI 🤖 
 🔄 BING
 💬 GPT
 📅 DAIL
 💬 CHATGPT
 
-*TEXT GRAPHIC EDITOR*
+TEXT GRAPHIC EDITOR
 🎐 SNAPBLEND🎐
 🔍 SHADOW
 ✍️ WRITE
@@ -1630,7 +1630,7 @@ case 'truth':
 🍃 NARUTOBANNER
 ✨ SHINETEXT
 
-🍂 Obtain the fulSCROLL UP TO SEE RECENT COMMANDS*`
+SCROLL UP TO SEE RECENT COMMANDS`🔚
 
   if (randomImage) {
     Cortana.sendMessage(from, { image: { url: randomImage }, caption: txt }, { quoted: m });
