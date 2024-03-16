@@ -1,5 +1,5 @@
 <a href="https://ibb.co/pQNpmwN"><img src="https://i.ibb.co/xYwQ4gLw/cheemspc.jpg" alt="CORTANA-AI" border="0"></a>
-<h1 align="center">⭐CORTANA-AII⭐<br></h1>
+<h1 align="center">⭐CORTANA-AI⭐<br></h1>
 
 <p align="center"> 
   I am "CORTANA-AII" a WhatsApp bot made by Ayush to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
