@@ -42,7 +42,7 @@
 
 # Setup For Deployment 👇
 
-- FORK THE REPOSITORY [Here](https://github.com/Emmkash20/CORTANA-AI/fork)
+- FORK THE REPOSITORY [Here](https://github.com/Emmkash20/CORTANA-AII/fork)
 
 
 ## ` Pair with WhatsApp`
