@@ -125,7 +125,7 @@ pkg install yarn
 
 pkg install imagemagick -y
 
-git clone https://github.com/Emmkash20/CORTANA-AI
+git clone https://github.com/Emmkash20/CORTANA-AII
 
 cd CORTANA-AI
 
