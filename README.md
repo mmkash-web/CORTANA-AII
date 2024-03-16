@@ -1,8 +1,8 @@
 <a href="https://ibb.co/pQNpmwN"><img src="https://i.ibb.co/xYwQ4gLw/cheemspc.jpg" alt="CORTANA-AI" border="0"></a>
-<h1 align="center">⭐CORTANA-AI⭐<br></h1>
+<h1 align="center">⭐CORTANA-AII⭐<br></h1>
 
 <p align="center"> 
-  I am "CORTANA-AI" a WhatsApp bot made by Ayush to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
+  I am "CORTANA-AII" a WhatsApp bot made by Ayush to do everything that is possible on WhatsApp based on WhatsApp Multi Device(MD) Support.
 </p>
 </br>
 
@@ -46,7 +46,7 @@
 
 
 ## ` Pair with WhatsApp`
-<h2 align="left">  <a href="https://CORTANA-AI-pair-riders004.koyeb.app/"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="90" />
+<h2 align="left">  <a href="https://CORTANA-AII-pair-riders004.koyeb.app/"><img src="https://play-lh.googleusercontent.com/901aMQFFnVoX2T-YuJmTIwpPve_SUgMv_QSyzMSPtAqt_l0CyXN1DxfD6xXU0r2f9iM=w240-h480-rw" width="90" />
 </a>
 </h2>
 
@@ -58,7 +58,7 @@
 
 
 
-<a href="https://heroku.com/deploy?template=https://github.com/Emmkash20/CORTANA-AI">
+<a href="https://heroku.com/deploy?template=https://github.com/Emmkash20/CORTANA-AII">
     <img src="https://www.herokucdn.com/deploy/button.png" width="160px" alt="Deploy on Heroku" >
     </a>
 
